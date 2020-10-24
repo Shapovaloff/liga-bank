@@ -13,9 +13,13 @@
   color: $color-main-background;
   text-align: center;
   background-color: $color-brand;
-  padding: 16px 48px 14px;
+  padding: 16px 48px;
   cursor: pointer;
   transition: opacity $transition-2;
+
+  @include media(xl) {
+    padding: 14px 48px;
+  }
 
   &:active {
     opacity: 0.4;

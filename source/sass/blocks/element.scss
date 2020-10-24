@@ -28,10 +28,10 @@
   margin-bottom: 22px;
 
   @include media(xl) {
-    margin-bottom: 18px;
+    margin-bottom: 17px;
   }
 
-  @include media(xl) {
+  @include media(m) {
     margin-bottom: 14px;
   }
 }

@@ -24,7 +24,7 @@ var mobMenu = function () {
     window.body.classList.toggle(Class.NO_SCROLL);
   };
 
-  var onClickMainNav = function (evt) {
+  var onClickMainNav = function () {
     getToggleVisibleMenu();
     mainNav.removeEventListener('click', onClickMainNav);
   };

@@ -25,6 +25,10 @@
     @include media(xl) {
       margin-top: 0;
     }
+
+    @include media(m) {
+      margin-top: -5px;
+    }
   }
 
   &--header {

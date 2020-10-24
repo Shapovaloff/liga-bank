@@ -39,6 +39,11 @@
   }
 }
 
+.option__input:focus ~ .option__label {
+  color: $color-brand;
+  text-decoration: underline;
+}
+
 .option__element + .option__label {
   margin-left: 8px;
 }

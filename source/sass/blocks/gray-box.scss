@@ -1,6 +1,5 @@
 .grayBox {
   width: 500px;
-  display: flex;
   flex-direction: column;
   background-color: $color-main-background;
   padding: 55px 60px 60px 58px;
@@ -55,7 +54,7 @@
 
   @include media(xl) {
     font-size: 18px;
-    margin-bottom: 24px;
+    margin-bottom: 27px;
   }
 
   @include media(m) {
@@ -68,6 +67,10 @@
   width: 100%;
   margin-top: -26px;
   margin-bottom: 34px;
+
+  @include media(m) {
+    margin-bottom: 34px;
+  }
 
   @include media(m) {
     margin-top: -13px;
