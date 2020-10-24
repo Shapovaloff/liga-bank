@@ -5,7 +5,7 @@ import select from './components/select.js';
 import services from './components/services.js';
 import popupLogin from './components/popup-login.js';
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', function () {
   select();
   popupLogin();
 });

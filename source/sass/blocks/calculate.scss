@@ -27,18 +27,36 @@
   padding-right: 5px;
   margin-left: -16px;
 
+  @include media(xl) {
+    font-size: 16px;
+    margin-left: -23px;
+  }
+
   @include media(m) {
     width: 95px;
+    margin-left: 24px;
   }
 }
 
 .calculate--contribution .calculate__input {
   margin-left: -30px;
+
+  @include media(xl) {
+    margin-left: -37px;
+  }
+
+  @include media(m) {
+    margin-left: 10px;
+  }
 }
 
 .calculate--term .calculate__input {
   width: 32px;
   margin-left: -19px;
+
+  @include media(m) {
+    margin-left: 52px;
+  }
 }
 
 .calculate__prefix {
@@ -52,6 +70,10 @@
   text-align: left;
   padding-top: 15px;
   padding-bottom: 16px;
+
+  @include media(xl) {
+    font-size: 16px;
+  }
 
   @include media(m) {
     width: 95px;
@@ -104,17 +126,26 @@
       margin-left: -1px;
       transition: background-color $transition-2;
     }
+
+    @include media(m) {
+      right: 12px;
+    }
   }
 
   &:hover,
   &:focus {
     outline: none;
+  }
 
-    &::before,
-    &::after {
-      background-color: $color-brand;
+  &:hover::before,
+  &:focus::after {
+    background-color: $color-brand;
+
+    @include media(xl) {
+      background-color: $color-text;
     }
   }
+
 
   &:active {
     opacity: 0.4;

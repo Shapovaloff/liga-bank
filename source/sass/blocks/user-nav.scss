@@ -18,15 +18,38 @@
   display: flex;
   align-items: center;
   color: $color-text;
+  position: relative;
 
   &:hover,
   &:focus {
     color: $color-brand;
     outline: none;
+
+    @include media(xl) {
+      color: $color-text;
+    }
   }
 
   &:active {
     opacity: 0.4;
+
+    @include media(xl) {
+      opacity: 1;
+    }
+  }
+
+  &::after {
+    @include media(xl) {
+      display: block;
+      width: 200%;
+      height: 200%;
+      content: "";
+      background-color: transparent;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 }
 

@@ -5,16 +5,18 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  margin-right: -5px;
+  margin: -3px -5px 0 0;
 
   @include media(xl) {
     width: 132px;
     margin-right: 0;
-    margin-left: -10px;
+    margin-top: 0;
+    margin-left: -5px;
   }
 
   @include media(m) {
-    margin-top: 4px;
+    margin-top: -5px;
+    margin-left: -10px;
   }
 }
 
@@ -47,9 +49,17 @@
   &:focus {
     color: $color-brand;
     outline: none;
+
+    @include media(xl) {
+      color: $color-text;
+    }
   }
 
   &:active {
     opacity: 0.4;
+
+    @include media(xl) {
+      opacity: 1;
+    }
   }
 }

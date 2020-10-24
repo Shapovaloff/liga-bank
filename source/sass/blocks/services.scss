@@ -1,4 +1,5 @@
 .services {
+  position: relative;
   padding-top: 60px;
   width: 100%;
   max-width: $max-width;
@@ -50,29 +51,40 @@
   @include media(xl) {
     padding-left: 45px;
     padding-right: 45px;
+    padding-bottom: 59px;
   }
 
   @include media(m) {
     padding-left: $padding-mobile;
     padding-right: $padding-mobile;
+    padding-bottom: 50px;
+    min-height: 361px;
   }
 }
 
 .services__main {
   width: 395px;
+  flex-shrink: 0;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
 
+  @include media(xl) {
+    width: 355px;
+  }
+
   @include media(m) {
-    //position: relative;
-    //z-index: 0;
+    width: 290px;
+    align-items: stretch;
+    position: relative;
+    z-index: 1;
   }
 }
 
 .services__main h2 {
   @include style-reset;
 
+  max-width: 100%;
   font-weight: 500;
   font-size: 22px;
   line-height: 140%;
@@ -80,18 +92,19 @@
 
   @include media(xl) {
     font-size: 18px;
-    margin-bottom: 35px;
+    margin-bottom: 22px;
   }
 
   @include media(m) {
     font-size: 16px;
-    margin-bottom: 30px;
+    margin-bottom: 17px;
   }
 }
 
 .services__main p {
   @include style-reset;
 
+  max-width: 100%;
   font-size: 18px;
   line-height: 130%;
 
@@ -105,36 +118,107 @@
 }
 
 .services__main ul {
+  max-width: 100%;
   list-style-image: url("../img/svg/list-mark.svg");
   margin: 0 0 33px 0;
   padding-left: 20px;
 
   @include media(xl) {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
   }
 
   @include media(m) {
-    padding-left: 21px;
+    list-style-image: url("../img/svg/list-mark-mob.svg");
     width: 240px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    padding-left: 16px;
   }
 }
 
 .services__main li + li {
   margin-top: 15px;
+
+  @include media(xl) {
+    margin-top: 14px;
+  }
+
+  @include media(m) {
+    margin-top: 8px;
+  }
 }
 
 .services__img {
+  width: 440px;
+  height: 290px;
+  margin-top: 6px;
+  margin-left: 50px;
+
+  @include media(xl) {
+    width: 289px;
+    height: 260px;
+    margin-left: 33px;
+  }
+
   @include media(m) {
     position: absolute;
     right: 0;
     top: 98px;
-    z-index: -1;
-    width: 36%;
+    z-index: 0;
+    width: 27%;
+    height: auto;
     max-width: 170px;
+    margin-top: 0;
 
     img {
       width: 100%;
     }
+  }
+}
+
+.services__additional {
+  max-width: 100%;
+}
+
+.services__additional a {
+  @include style-reset;
+
+  color: $color-text;
+  transition: color $transition-2, opacity $transition-2;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    color: $color-brand;
+    text-decoration: underline;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+}
+
+.services__swiper-pagination {
+  display: none;
+
+  @include media(xl) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 15px;
+  }
+}
+
+.services__swiper-pagination.swiper-pagination-bullets {
+  bottom: 40px;
+
+  @include media(xl) {
+    bottom: 15px;
+  }
+
+  @include media(m) {
+    bottom: 10px;
   }
 }

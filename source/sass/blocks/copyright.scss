@@ -8,6 +8,10 @@
   @include style-reset;
 
   margin-bottom: 10px;
+
+  @include media(m) {
+    margin-bottom: 0;
+  }
 }
 
 .copyright p {

@@ -38,14 +38,26 @@
 
 .page__block {
   width: 100%;
-  padding-bottom: 98px;
+  padding-bottom: 97px;
 
   @include media(xl) {
-    padding-bottom: 80px;
+    padding-bottom: 70px;
   }
 
   @include media(m) {
-    padding-bottom: 60px;
+    padding-bottom: 54px;
+  }
+
+  &--contacts {
+    padding-bottom: 110px;
+
+    @include media(xl) {
+      padding-bottom: 80px;
+    }
+
+    @include media(m) {
+      padding-bottom: 60px;
+    }
   }
 }
 
@@ -60,11 +72,23 @@
 
   @include media(xl) {
     font-size: 32px;
-    margin-bottom: 45px;
+    margin-bottom: 28px;
   }
 
   @include media(m) {
     font-size: 22px;
-    margin-bottom: 35px;
+    margin-bottom: 22px;
+  }
+}
+
+.page__block--contacts .page__blockTitle {
+  margin-bottom: 55px;
+
+  @include media(xl) {
+    margin-bottom: 33px;
+  }
+
+  @include media(m) {
+    margin-bottom: 25px;
   }
 }

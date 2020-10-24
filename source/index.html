@@ -360,14 +360,14 @@
           </div>
         </div>
       </div>
+      <div class="swiper-pagination services__swiper-pagination"></div>
     </div>
-    <div class="swiper-pagination services__swiper-pagination"></div>
   </section>
   <div class="page__layout">
     <section class="page__block credit js-credit" id="credit">
       <h2 class="page__blockTitle">Кредитный калькулятор</h2>
       <div class="page__blocMain credit__main">
-<!--        <div class="credit__container">-->
+        <div class="credit__container">
           <div class="credit__box">
             <div class="credit__element element element--top">
               <p class="element__label">Шаг 1. Цель кредита</p>
@@ -426,7 +426,7 @@
                     </div>
                   </li>
                   <li class="element__listItem">
-                    <div class="formArea js-range-calculate">
+                    <div class="formArea formArea--pixel-perfect js-range-calculate">
                       <label class="formArea__label" for="term">Срок кредитования</label>
                       <div class="formArea__slot">
                         <div class="calculate calculate--term">
@@ -486,7 +486,7 @@
             </div>
             <div class="grayBox__btn btn btn--w100">Оформить заявку</div>
           </div>
-<!--        </div>-->
+        </div>
         <div class="credit__box credit__box--center grayBox grayBox--xs">
           <p class="grayBox__title">Шаг 3. Оформление заявки</p>
           <form class="grayBox__form form" action="#" name="#" method="post">
@@ -525,14 +525,13 @@
               </li>
               <li class="form__listItem">
                 <label class="formArea formArea--horizontal">
-                  <span class="formArea__label">Срок крдеитования</span>
+                  <span class="formArea__label">Срок кредитования</span>
                   <span class="formArea__slot">
                     <input class="formArea__input" type="text" value="5 лет" disabled>
                   </span>
                 </label>
               </li>
             </ul>
-
             <div class="form__grid">
               <div class="form__row">
                 <div class="form__cell">
@@ -563,34 +562,33 @@
                 </div>
               </div>
             </div>
-
-            <button class="form__btn btn">Отправить</button>
+            <button class="form__btn btn btn--form">Отправить</button>
           </form>
         </div>
       </div>
     </section>
-    <section class="page__block contacts js-contacts" id="contacts">
+    <section class="page__block page__block--contacts contacts js-contacts" id="contacts">
       <h2 class="page__blockTitle">Отделения Лига Банка</h2>
       <div class="page__blocMain contacts__main">
         <div class="contacts__top">
           <ul class="contacts__optionGroup optionGroup">
             <li class="optionGroup__item">
-              <label class="option">
+              <label class="option option--xs">
                 <input class="option__input" type="checkbox" checked>
                 <span class="option__element"></span>
                 <span class="option__label">Россия</span>
               </label>
             </li>
             <li class="optionGroup__item">
-              <label class="option">
+              <label class="option option--xs">
                 <input class="option__input" type="checkbox" checked>
                 <span class="option__element"></span>
                 <span class="option__label">СНГ</span>
               </label>
             </li>
             <li class="optionGroup__item">
-              <label class="option">
-                <input class="option__input" type="checkbox" checked>
+              <label class="option option--xs">
+                <input class="option__input" type="checkbox">
                 <span class="option__element"></span>
                 <span class="option__label">Европа</span>
               </label>
@@ -716,14 +714,14 @@
     <img src="img/logo/logo-form.svg" alt="Лига Банк" width="150" height="27">
   </div>
   <form class="form form--login-popup" action="#" name="#" method="post">
-    <label class="form__area formArea js-area-login">
+    <label class="form__area formArea formArea--smallLabel js-area-login">
       <span class="formArea__label">Логин</span>
       <span class="formArea__slot">
         <input class="formArea__input" type="text" required="">
       <span class="formArea__error">Заполните поле</span>
       </span>
     </label>
-    <div class="form__area formArea js-area-password">
+    <div class="form__area formArea formArea--smallLabel js-area-password">
       <label class="formArea__label" for="login-password">Пароль</label>
       <div class="formArea__slot">
         <input class="formArea__input formArea__input--withBtn" id="login-password" type="password" required="">
@@ -738,8 +736,9 @@
         <a href="#nowhere">Забыли пароль?</a>
       </div>
     </div>
-    <button class="form__btn btn btn--w100 js-login-submit">Войти</button>
+    <button class="form__btn btn btn--popup js-login-submit">Войти</button>
   </form>
+  <a class="popup__link" href="#nowhere">Забыли пароль?</a>
 </div>
 <div class="overlay js-overlay"></div>
 <script src="js/vendor.js"></script>

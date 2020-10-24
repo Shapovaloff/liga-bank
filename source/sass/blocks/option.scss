@@ -13,16 +13,18 @@
   display: block;
   width: 16px;
   height: 16px;
-  background-color: $color-brand;
+  background-color: $color-main-background;
   font-size: 0;
   line-height: 0;
   border-radius: 2px;
+  border: 1px solid $color-brand;
 }
 
 .option__input[type="checkbox"]:checked + .option__element {
   background-image: url("../img/svg/mark-white.svg");
   background-repeat: no-repeat;
   background-position: center;
+  background-color: $color-brand;
 }
 
 .option__label {
@@ -31,8 +33,16 @@
   font-size: 16px;
   line-height: 140%;
   color: $color-text;
+
+  @include media(m) {
+    font-size: 14px;
+  }
 }
 
 .option__element + .option__label {
   margin-left: 8px;
+}
+
+.option--xs .option__label {
+  font-size: 14px;
 }

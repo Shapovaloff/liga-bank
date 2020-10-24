@@ -48,10 +48,19 @@
     color: $color-brand;
     text-decoration: underline;
     outline: none;
+
+    @include media(xl) {
+      color: $color-text;
+      transition: none;
+    }
   }
 
   &:active {
     opacity: 0.4;
+
+    @include media(xl) {
+      opacity: 1;
+    }
   }
 
   @include media(xl) {

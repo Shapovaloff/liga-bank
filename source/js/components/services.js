@@ -11,7 +11,7 @@ var services = function () {
 
   var Class = {
     BULLET: 'bullet',
-    BULLET_ACTIVE: 'bullet--active',
+    BULLET_ACTIVE: 'bullet--activeGray',
   };
 
   var swiperThumbs = document.querySelector(Selector.SWIPER_THUMBS);

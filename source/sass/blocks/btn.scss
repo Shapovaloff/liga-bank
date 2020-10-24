@@ -19,6 +19,10 @@
 
   &:active {
     opacity: 0.4;
+
+    @include media(xl) {
+      opacity: 1;
+    }
   }
 
   @include media(xl) {
@@ -51,6 +55,11 @@
     font-size: 16px;
     line-height: 140%;
     width: 100%;
+
+    @include media(m) {
+      font-size: 14px;
+      padding-top: 18px;
+    }
   }
 
   &--services {
@@ -58,5 +67,44 @@
     line-height: 19px;
     padding-left: 31px;
     padding-right: 31px;
+
+    @include media(m) {
+      padding-top: 13px;
+      padding-bottom: 11px;
+    }
+  }
+
+  &--form {
+    min-height: 52px;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 14px 58px 14px;
+
+    @include media(xl) {
+      width: 100%;
+      padding: 14px 58px 14px 65px;
+    }
+
+    @include media(m) {
+      font-size: 14px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  &--popup {
+    width: 100%;
+    font-size: 18px;
+    padding: 18px 30px 19px 30px;
+
+    @include media(xl) {
+      padding-top: 21px;
+    }
+
+    @include media(m) {
+      font-size: 14px;
+      padding-top: 19px;
+      padding-bottom: 16px;
+    }
   }
 }
