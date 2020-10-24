@@ -129,3 +129,69 @@
     margin-top: 10px;
   }
 }
+
+.popup--result {
+  border: none;
+  width: 500px;
+  min-height: 193px;
+  padding: 56px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+
+  @include media(xl) {
+    width: 678px;
+  }
+
+  @include media(m) {
+    width: calc(100% - 30px);
+    padding-left: 26px;
+    padding-right: 26px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+}
+
+.popup--result .popup__close {
+  top: 29px;
+  right: 27px;
+
+  @include media(m) {
+    top: 15px;
+    right: 15px;
+  }
+}
+
+.popup--show .popup--result {
+  display: flex;
+}
+
+.popup__title {
+  @include style-reset;
+
+  width: 100%;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 140%;
+  color: $color-text;
+  margin-bottom: 10px;
+
+  @include media(m) {
+    width: 200px;
+    font-size: 18px;
+    line-height: 140%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.popup__text {
+  @include style-reset;
+
+  width: 80%;
+  font-size: 16px;
+  line-height: 140%;
+  color: $color-text-label;
+  margin-left: auto;
+  margin-right: auto;
+}

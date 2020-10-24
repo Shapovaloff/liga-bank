@@ -1,8 +1,11 @@
 .option {
-  width: 100%;
   display: flex;
   align-items: center;
   cursor: pointer;
+}
+
+.option + .option {
+  margin-top: 3px;
 }
 
 .option__input {
@@ -23,8 +26,8 @@
 .option__input[type="checkbox"]:checked + .option__element {
   background-image: url("../img/svg/mark-white.svg");
   background-repeat: no-repeat;
-  background-position: center;
   background-color: $color-brand;
+  background-position: 3px center;
 }
 
 .option__label {

@@ -1,7 +1,5 @@
 .promo {
   width: 100%;
-  max-width: $max-width;
-  margin: 0 auto;
 }
 
 .promo__swiper-wrapper {
@@ -12,8 +10,8 @@
   position: relative;
   box-sizing: border-box;
   width: 100%;
-  padding-top: 100px;
-  padding-bottom: 114px;
+  padding-top: 7.5%;
+  padding-bottom: 8%;
   min-height: 400px;
   height: unset;
 
@@ -30,6 +28,12 @@
     padding-bottom: 26px;
     padding-left: 15px;
   }
+}
+
+.promo__slide-wrapper {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
 }
 
 .promo__main {

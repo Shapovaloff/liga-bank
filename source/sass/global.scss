@@ -59,6 +59,17 @@ input[type="text"]:disabled {
   opacity: 1;
 }
 
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .visually-hidden {
   @include visuallyHidden;
+}
+
+.d-none {
+  display: none;
 }

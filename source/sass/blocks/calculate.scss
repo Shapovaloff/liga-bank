@@ -1,82 +1,43 @@
 .calculate {
   width: 100%;
   position: relative;
-}
-
-.calculate__area {
-  width: 100%;
   min-height: 60px;
   display: flex;
   align-items: center;
-  justify-content: center;
   border: 1px solid $color-text;
   border-radius: $border-radius;
 }
 
+.calculate--with-btn .calculate__input {
+  width: calc(100% - 120px);
+
+  @include media(m) {
+    width: calc(100% - 50px);
+  }
+}
+
 .calculate__input {
-  width: 100px;
+  width: 100%;
+  flex-grow: 1;
   border: none;
   font: inherit;
   font-weight: 500;
   font-size: 18px;
   line-height: 140%;
   color: $color-text;
-  text-align: right;
+  text-align: center;
   padding-top: 15px;
   padding-bottom: 16px;
-  padding-right: 5px;
-  margin-left: -16px;
-
-  @include media(xl) {
-    font-size: 16px;
-    margin-left: -23px;
-  }
-
-  @include media(m) {
-    width: 95px;
-    margin-left: 24px;
-  }
-}
-
-.calculate--contribution .calculate__input {
-  margin-left: -30px;
-
-  @include media(xl) {
-    margin-left: -37px;
-  }
-
-  @include media(m) {
-    margin-left: 10px;
-  }
-}
-
-.calculate--term .calculate__input {
-  width: 32px;
-  margin-left: -19px;
-
-  @include media(m) {
-    margin-left: 52px;
-  }
-}
-
-.calculate__prefix {
-  @include style-reset;
-
-  font: inherit;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 140%;
-  color: $color-text;
-  text-align: left;
-  padding-top: 15px;
-  padding-bottom: 16px;
+  padding-left: 50px;
+  padding-right: 50px;
 
   @include media(xl) {
     font-size: 16px;
   }
 
   @include media(m) {
-    width: 95px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -86,16 +47,17 @@
   font-size: 0;
   line-height: 0;
   display: block;
-  position: absolute;
-  top: 50%;
-  left: 21px;
+  position: relative;
   border: none;
   background-color: transparent;
-  width: 22px;
-  height: 22px;
-  transform: translateY(-50%);
+  width: 60px;
+  height: 58px;
   cursor: pointer;
   transition: opacity $transition-2;
+
+  @include media(m) {
+    width: 50px;
+  }
 
   &::before {
     position: absolute;
@@ -104,15 +66,17 @@
     height: 2px;
     content: "";
     background-color: $color-text;
-    top: 11px;
-    left: 3px;
+    top: 28px;
+    left: 23px;
     margin-top: -1px;
     transition: background-color $transition-2;
   }
 
   &--plus {
-    left: auto;
-    right: 21px;
+    &::before {
+      left: auto;
+      right: 23.5px;
+    }
 
     &::after {
       position: absolute;
@@ -121,14 +85,10 @@
       height: 16px;
       content: "";
       background-color: $color-text;
-      left: 11px;
-      top: 3px;
+      right: 30px;
+      top: 20px;
       margin-left: -1px;
       transition: background-color $transition-2;
-    }
-
-    @include media(m) {
-      right: 12px;
     }
   }
 

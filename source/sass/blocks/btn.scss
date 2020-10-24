@@ -66,6 +66,23 @@
     }
   }
 
+  &--w90 {
+    font-size: 16px;
+    line-height: 140%;
+    width: 89%;
+
+    @include media(xl) {
+      width: 92.5%;
+    }
+
+    @include media(m) {
+      font-size: 14px;
+      width: 100%;
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+  }
+
   &--services {
     font-size: 16px;
     line-height: 19px;

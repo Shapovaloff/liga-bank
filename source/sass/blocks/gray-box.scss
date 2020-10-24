@@ -2,12 +2,13 @@
   width: 500px;
   flex-direction: column;
   background-color: $color-main-background;
-  padding: 55px 60px 60px 58px;
+  padding: 55px 15px 60px 58px;
   align-self: flex-start;
+  flex-shrink: 0;
 
   @include media(xl) {
     width: 100%;
-    padding: 53px 60px 60px;
+    padding: 53px 15px 60px 60px;
   }
 
   @include media(m) {
@@ -46,6 +47,15 @@
     font-size: 18px;
     margin-bottom: 22px;
   }
+}
+
+.grayBox__text {
+  @include style-reset;
+
+  font-size: 16px;
+  line-height: 140%;
+  color: $color-text-label;
+  width: 253px;
 }
 
 .grayBox--xs .grayBox__title {
@@ -128,6 +138,10 @@
   font-size: 22px;
   line-height: 140%;
   margin-bottom: 2px;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 
   @include media(m) {
     font-size: 18px;
@@ -141,4 +155,34 @@
   font-size: 16px;
   line-height: 140%;
   color: $color-text-label;
+}
+
+.grayBox--error {
+  animation: shake 0.6s;
+
+  @include media(m) {
+    animation: none;
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }

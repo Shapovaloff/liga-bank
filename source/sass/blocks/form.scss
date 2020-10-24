@@ -34,6 +34,10 @@
   padding-top: 14px;
   padding-bottom: 10px;
 
+  &--invisible {
+    display: none;
+  }
+
   @include media(m) {
     padding: 15px 0 13px;
   }

@@ -96,14 +96,14 @@
         </li>
       </ul>
     </nav>
-      <a href="#nowhere" class="pageHeader__userBtn userBtn js-login-open">
+    <a href="#nowhere" class="pageHeader__userBtn userBtn js-login-open">
         <span class="userBtn__btnIcon">
           <svg width="20px" height="22px">
             <use xlink:href="#icon-login"></use>
           </svg>
         </span>
-        <span class="userBtn__btnText">Войти в Интернет-банк</span>
-      </a>
+      <span class="userBtn__btnText">Войти в Интернет-банк</span>
+    </a>
   </div>
   <div class="pageHeader__dropdown">
     <nav class="pageHeader__dropdownNav mainNav mainNav--dropdown">
@@ -159,71 +159,77 @@
     <div class="swiper-container promo__swiper-container">
       <div class="swiper-wrapper promo__swiper-wrapper">
         <div class="swiper-slide promo__swiper-slide">
-          <div class="promo__main promo__main--white">
-            <h1>Лига Банк</h1>
-            <p>Кредиты на любой случай</p>
-            <a class="btn btn--white promo__btn" href="#credit">Рассчитать кредит</a>
-          </div>
-          <div class="promo__img">
-            <picture>
-              <source type="image/webp" media="(min-width: 1200px)"
-                      srcset="img/slider/slide-1.webp 1x, img/slider/slide-1@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)"
-                      srcset="img/slider/slide-1-tablet.webp 1x, img/slider/slide-1-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/slider/slide-1-mob.webp 1x, img/slider/slide-1-mob@2x.webp 2x">
-              <!-- 1x: 1366px; 2x: 2732 -->
-              <source media="(min-width: 1200px)" srcset="img/slider/slide-1.jpg 1x, img/slider/slide-1@2x.jpg 2x">
-              <!-- 1x: 768px; 2x: 1536 -->
-              <source media="(min-width: 768px)"
-                      srcset="img/slider/slide-1-tablet.jpg 1x, img/slider/slide-1-tablet@2x.jpg 2x">
-              <!-- 1x: 320px; 2x: 640 -->
-              <img src="img/slider/slide-1-mob.jpg" srcset="img/slider/slide-1-mob@2x.jpg 2x" alt="Слайд 1">
-            </picture>
-          </div>
-        </div>
-        <div class="swiper-slide promo__swiper-slide">
-          <div class="promo__main">
-            <h1>Лига Банк</h1>
-            <p>Ваша уверенность в завтрашнем дне</p>
-          </div>
-          <div class="promo__img">
-            <picture>
-              <source type="image/webp" media="(min-width: 1200px)"
-                      srcset="img/slider/slide-2.webp 1x, img/slider/slide-2@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)"
-                      srcset="img/slider/slide-2-tablet.webp 1x, img/slider/slide-2-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/slider/slide-2-mob.webp 1x, img/slider/slide-2-mob@2x.webp 2x">
-              <!-- 1x: 1366px; 2x: 2732 -->
-              <source media="(min-width: 1200px)" srcset="img/slider/slide-2.jpg 1x, img/slider/slide-2@2x.jpg 2x">
-              <!-- 1x: 768px; 2x: 1536 -->
-              <source media="(min-width: 768px)"
-                      srcset="img/slider/slide-2-tablet.jpg 1x, img/slider/slide-2-tablet@2x.jpg 2x">
-              <!-- 1x: 320px; 2x: 640 -->
-              <img src="img/slider/slide-2-mob.jpg" srcset="img/slider/slide-2-mob@2x.jpg 2x" alt="Слайд 1">
-            </picture>
+          <div class="promo__slide-wrapper">
+            <div class="promo__main promo__main--white">
+              <h1>Лига Банк</h1>
+              <p>Кредиты на любой случай</p>
+              <a class="btn btn--white promo__btn" href="#credit">Рассчитать кредит</a>
+            </div>
+            <div class="promo__img">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)"
+                        srcset="img/slider/slide-1.webp 1x, img/slider/slide-1@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                        srcset="img/slider/slide-1-tablet.webp 1x, img/slider/slide-1-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/slider/slide-1-mob.webp 1x, img/slider/slide-1-mob@2x.webp 2x">
+                <!-- 1x: 1366px; 2x: 2732 -->
+                <source media="(min-width: 1200px)" srcset="img/slider/slide-1.jpg 1x, img/slider/slide-1@2x.jpg 2x">
+                <!-- 1x: 768px; 2x: 1536 -->
+                <source media="(min-width: 768px)"
+                        srcset="img/slider/slide-1-tablet.jpg 1x, img/slider/slide-1-tablet@2x.jpg 2x">
+                <!-- 1x: 320px; 2x: 640 -->
+                <img src="img/slider/slide-1-mob.jpg" srcset="img/slider/slide-1-mob@2x.jpg 2x" alt="Слайд 1">
+              </picture>
+            </div>
           </div>
         </div>
         <div class="swiper-slide promo__swiper-slide">
-          <div class="promo__main">
-            <h1>Лига Банк</h1>
-            <p>Всегда рядом</p>
-            <a class="btn promo__btn" href="#contacts">Найти отделение</a>
+          <div class="promo__slide-wrapper">
+            <div class="promo__main">
+              <h1>Лига Банк</h1>
+              <p>Ваша уверенность в завтрашнем дне</p>
+            </div>
+            <div class="promo__img">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)"
+                        srcset="img/slider/slide-2.webp 1x, img/slider/slide-2@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                        srcset="img/slider/slide-2-tablet.webp 1x, img/slider/slide-2-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/slider/slide-2-mob.webp 1x, img/slider/slide-2-mob@2x.webp 2x">
+                <!-- 1x: 1366px; 2x: 2732 -->
+                <source media="(min-width: 1200px)" srcset="img/slider/slide-2.jpg 1x, img/slider/slide-2@2x.jpg 2x">
+                <!-- 1x: 768px; 2x: 1536 -->
+                <source media="(min-width: 768px)"
+                        srcset="img/slider/slide-2-tablet.jpg 1x, img/slider/slide-2-tablet@2x.jpg 2x">
+                <!-- 1x: 320px; 2x: 640 -->
+                <img src="img/slider/slide-2-mob.jpg" srcset="img/slider/slide-2-mob@2x.jpg 2x" alt="Слайд 1">
+              </picture>
+            </div>
           </div>
-          <div class="promo__img">
-            <picture>
-              <source type="image/webp" media="(min-width: 1200px)"
-                      srcset="img/slider/slide-3.webp 1x, img/slider/slide-3@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)"
-                      srcset="img/slider/slide-3-tablet.webp 1x, img/slider/slide-3-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/slider/slide-3-mob.webp 1x, img/slider/slide-3-mob@2x.webp 2x">
-              <!-- 1x: 1366px; 2x: 2732 -->
-              <source media="(min-width: 1200px)" srcset="img/slider/slide-3.jpg 1x, img/slider/slide-3@2x.jpg 2x">
-              <!-- 1x: 768px; 2x: 1536 -->
-              <source media="(min-width: 768px)"
-                      srcset="img/slider/slide-3-tablet.jpg 1x, img/slider/slide-3-tablet@2x.jpg 2x">
-              <!-- 1x: 320px; 2x: 640 -->
-              <img src="img/slider/slide-3-mob.jpg" srcset="img/slider/slide-3-mob@2x.jpg 2x" alt="Слайд 1">
-            </picture>
+        </div>
+        <div class="swiper-slide promo__swiper-slide">
+          <div class="promo__slide-wrapper">
+            <div class="promo__main">
+              <h1>Лига Банк</h1>
+              <p>Всегда рядом</p>
+              <a class="btn promo__btn" href="#contacts">Найти отделение</a>
+            </div>
+            <div class="promo__img">
+              <picture>
+<!--                <source type="image/webp" media="(min-width: 1200px)"-->
+<!--                        srcset="img/slider/slide-3.webp 1x, img/slider/slide-3@2x.webp 2x">-->
+                <source type="image/webp" media="(min-width: 768px)"
+                        srcset="img/slider/slide-3-tablet.webp 1x, img/slider/slide-3-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/slider/slide-3-mob.webp 1x, img/slider/slide-3-mob@2x.webp 2x">
+                <!-- 1x: 1366px; 2x: 2732 -->
+                <source media="(min-width: 1200px)" srcset="img/slider/slide-3.jpg 1x, img/slider/slide-3@2x.jpg 2x">
+                <!-- 1x: 768px; 2x: 1536 -->
+                <source media="(min-width: 768px)"
+                        srcset="img/slider/slide-3-tablet.jpg 1x, img/slider/slide-3-tablet@2x.jpg 2x">
+                <!-- 1x: 320px; 2x: 640 -->
+                <img src="img/slider/slide-3-mob.jpg" srcset="img/slider/slide-3-mob@2x.jpg 2x" alt="Слайд 1">
+              </picture>
+            </div>
           </div>
         </div>
       </div>
@@ -273,15 +279,9 @@
           <div class="services__main">
             <h2>Вклады Лига Банка – это выгодная инвестиция в свое будущее</h2>
             <ul>
-              <li>
-                <p>Проценты по вкладам до 7%</p>
-              </li>
-              <li>
-                <p>Разнообразные условия</p>
-              </li>
-              <li>
-                <p>Возможность ежемесячной капитализации или вывод процентов на банковскую карту</p>
-              </li>
+              <li>Проценты по вкладам до 7%</li>
+              <li>Разнообразные условия</li>
+              <li>Возможность ежемесячной капитализации или вывод процентов на банковскую карту</li>
             </ul>
             <a href="#nowhere" class="services__btn btn btn--services">Узнать подробнее</a>
           </div>
@@ -306,15 +306,9 @@
           <div class="services__main">
             <h2>Лига Банк выдает кредиты под любые цели</h2>
             <ul>
-              <li>
-                <p>Ипотечный кредит</p>
-              </li>
-              <li>
-                <p>Автокредит</p>
-              </li>
-              <li>
-                <p>Потребительский кредит</p>
-              </li>
+              <li>Ипотечный кредит</li>
+              <li>Автокредит</li>
+              <li>Потребительский кредит</li>
             </ul>
             <div class="services__additional">
               <p>Рассчитайте ежемесячный платеж и ставку по кредиту воспользовавшись нашим <a href="#credit">кредитным
@@ -341,15 +335,9 @@
           <div class="services__main">
             <h2>Лига Страхование — застрахуем все что захотите</h2>
             <ul>
-              <li>
-                <p>Автомобильное страхование</p>
-              </li>
-              <li>
-                <p>Страхование жизни и здоровья</p>
-              </li>
-              <li>
-                <p>Страхование недвижимости</p>
-              </li>
+              <li>Автомобильное страхование</li>
+              <li>Страхование жизни и здоровья</li>
+              <li>Страхование недвижимости</li>
             </ul>
             <a href="#nowhere" class="services__btn btn btn--services">Узнать подробнее</a>
           </div>
@@ -374,12 +362,8 @@
           <div class="services__main">
             <h2>Лига Банк — это огромное количество онлайн-сервисов для вашего удобства</h2>
             <ul>
-              <li>
-                <p>Мобильный банк, который всегда под рукой</p>
-              </li>
-              <li>
-                <p>Приложение Лига-проездной позволит вам оплачивать билеты по всему миру</p>
-              </li>
+              <li>Мобильный банк, который всегда под рукой</li>
+              <li>Приложение Лига-проездной позволит вам оплачивать билеты по всему миру</li>
             </ul>
             <a href="#nowhere" class="services__btn btn btn--services">Узнать подробнее</a>
           </div>
@@ -415,136 +399,273 @@
               <div class="element__slot">
                 <select class="select js-select" name="Выберите цель кредита">
                   <option label="Выберите цель кредита"></option>
-                  <option value="mortgage" data-name-calc="Стоимость недвижимости" data-name-option="Использовать материнский капитал" data-name-result="Сумма ипотеки" data-name-form="Ипотека" data-name-info="ипотечные кредиты" data-target-form="Сумма недвижимости">Ипотечное кредитование</option>
-                  <option value="car" data-name-calc="Стоимость автомобиля" data-name-option="Использовать материнский капитал" data-name-result="Сумма автокредита" data-name-form="Автокредит" data-name-info="автокредиты" data-target-form="Стоимость автомобиля">Автомобильное кредтование</option>
-                  <option value="consumer" data-name-calc="Сумма потребительского кредита" data-name-option="Участник зарплатного проекта нашего банка" data-name-result="Сумма кредита" data-name-form="Потребительский кредит" data-target-form="Сумма кредита">Потребительский кредит</option>
+                  <option value="mortgage" data-name-result="Сумма ипотеки" data-name-target="Ипотека" data-name-info="ипотечные кредиты" data-form-summer="Стоимость недвижимости" data-payment-threshold="500000" data-rate-treshold="15" data-rate-max="9.40" data-rate-min="8.50" data-income="45" >Ипотечное кредитование</option>
+                  <option value="car" data-name-result="Сумма автокредита" data-name-target="Автокредит" data-name-info="автокредиты" data-form-summer="Стоимость автомобиля" data-payment-threshold="200000" data-rate-treshold="2000000" data-rate-max="16" data-rate-min="15" data-min-bonus="8.5" data-max-bonus="3.5" data-income="45" data-target-form="Стоимость автомобиля">Автомобильное кредтование</option>
+                  <option value="consumer" data-name-result="Сумма кредита" data-name-target="Потребительский кредит" date-name-info="false" data-form-summer="Сумма кредита" data-summer-treshold-min="750000" data-summer-treshold="2000000" data-income="45" data-rate-min="9.5" data-rate="12.5" data-rate-max="15" data-rate-bonus="0.5">Потребительский кредит</option>
                 </select>
               </div>
             </div>
-            <div class="credit__element credit__element--invis">
-              <div class="element">
-                <p class="element__label">Шаг 2. Введите параметры кредита</p>
-                <div class="element__slot">
-                  <ul class="element__list">
-                    <li class="element__listItem">
-                      <div class="formArea formArea--calc">
-                        <label class="formArea__label js-name-calc" for="price">Стоимость недвижимости</label>
-                        <div class="formArea__slot">
-                          <div class="calculate js-calculate">
-                            <button class="calculate__btn" type="button" aria-label="уменьшить"></button>
-                            <div class="calculate__area">
-                              <input class="calculate__input" id="price" type="text" inputmode="numeric" value="2 000 000">
-                              <span class="calculate__prefix">рублей</span>
-                            </div>
-                            <button class="calculate__btn calculate__btn--plus" type="button"
-                                    aria-label="увеличить"></button>
-                          </div>
-                        </div>
-                        <div class="formArea__caption">
-                          <p>От 1 200 000 до 25 000 000 рублей</p>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="element__listItem">
-                      <div class="formArea js-range-calculate">
-                        <label class="formArea__label" for="contribution">Первоначальный взнос</label>
-                        <div class="formArea__slot">
-                          <div class="calculate calculate--contribution">
-                            <div class="calculate__area">
-                              <input class="calculate__input" id="contribution" type="text" inputmode="numeric" value="200 000">
-                              <span class="calculate__prefix">рублей</span>
+            <div class="credit__slide credit__slide--mortgage">
+              <div class="credit__element">
+                <div class="element">
+                  <p class="element__label">Шаг 2. Введите параметры кредита</p>
+                  <div class="element__slot">
+                    <ul class="element__list">
+                      <li class="element__listItem">
+                        <div class="formArea formArea--calc">
+                          <label class="formArea__label" for="mortgage-price">Стоимость недвижимости</label>
+                          <div class="formArea__slot">
+                            <div class="calculate calculate--with-btn js-main-calc">
+                              <button class="calculate__btn" type="button" data-target="min" aria-label="уменьшить"></button>
+                              <input class="calculate__input" data-value="2000000" data-min="1200000" data-max="25000000" data-error-message="Некорректное значение" data-prefix="рублей" data-step="100000" id="mortgage-price" type="text" inputmode="numeric" value="2 000 000 рублей">
+                              <button class="calculate__btn calculate__btn--plus" data-target="plus" type="button" aria-label="увеличить"></button>
                             </div>
                           </div>
+                          <div class="formArea__caption">
+                            <p>От 1 200 000 до 25 000 000 рублей</p>
+                          </div>
                         </div>
-                        <div class="formArea__caption">
-                          <div class="range">
-                            <div class="range__bar">
-                              <button class="range__btn" type="button" aria-label="ползунок"></button>
+                      </li>
+                      <li class="element__listItem">
+                        <div class="formArea js-payment-calc">
+                          <label class="formArea__label" for="mortgage-contribution">Первоначальный взнос</label>
+                          <div class="formArea__slot">
+                            <div class="calculate calculate--contribution">
+                              <input class="calculate__input" data-percent="10" data-prefix="рублей" data-range-step="5" id="mortgage-contribution" type="text" inputmode="numeric" value="200 000 рублей">
                             </div>
-                            <div class="range__caption">
-                              <p class="range__captionLeft">10%</p>
+                          </div>
+                          <div class="formArea__caption">
+                            <div class="range">
+                              <div class="range__bar">
+                                <div class="range__scale"></div>
+                                <button class="range__btn" type="button" aria-label="ползунок"></button>
+                              </div>
+                              <div class="range__caption">
+                                <p class="range__captionLeft">10%</p>
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </li>
-                    <li class="element__listItem">
-                      <div class="formArea formArea--pixel-perfect js-range-calculate">
-                        <label class="formArea__label" for="term">Срок кредитования</label>
-                        <div class="formArea__slot">
-                          <div class="calculate calculate--term">
-                            <div class="calculate__area">
-                              <input class="calculate__input" id="term" type="text" inputmode="numeric" value="5">
-                              <span class="calculate__prefix">лет</span>
+                      </li>
+                      <li class="element__listItem">
+                        <div class="formArea formArea--pixel-perfect js-term-calc">
+                          <label class="formArea__label" for="mortgage-term">Срок кредитования</label>
+                          <div class="formArea__slot">
+                            <div class="calculate calculate--term">
+                              <input class="calculate__input" data-min="5" data-max="30" data-prefix="год,года,лет" data-range-step="1" id="mortgage-term" type="text" inputmode="numeric" value="5 лет">
+                            </div>
+                          </div>
+                          <div class="formArea__slot">
+                          </div>
+                          <div class="formArea__caption">
+                            <div class="range">
+                              <div class="range__bar">
+                                <div class="range__scale"></div>
+                                <button class="range__btn" type="button" aria-label="ползунок"></button>
+                              </div>
+                              <div class="range__caption">
+                                <p class="range__captionLeft">5 лет</p>
+                                <p class="range__captionRight">30 лет</p>
+                              </div>
                             </div>
                           </div>
                         </div>
-                        <div class="formArea__slot">
-                        </div>
-                        <div class="formArea__caption">
-                          <div class="range">
-                            <div class="range__bar">
-                              <button class="range__btn" type="button" aria-label="ползунок"></button>
-                            </div>
-                            <div class="range__caption">
-                              <p class="range__captionLeft">5 лет</p>
-                              <p class="range__captionRight">30 лет</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
+              <div class="credit__option">
+                <label class="option js-option">
+                  <input class="option__input" data-bonus="470000" type="checkbox" checked>
+                  <span class="option__element"></span>
+                  <span class="option__label">Использовать материнский капитал</span>
+                </label>
+              </div>
             </div>
-            <div class="credit__option">
-              <label class="option js-option">
-                <input class="option__input" type="checkbox" checked>
-                <span class="option__element"></span>
-                <span class="option__label">Использовать материнский капитал</span>
-              </label>
+            <div class="credit__slide credit__slide--car">
+              <div class="credit__element">
+                <div class="element">
+                  <p class="element__label">Шаг 2. Введите параметры кредита</p>
+                  <div class="element__slot">
+                    <ul class="element__list">
+                      <li class="element__listItem">
+                        <div class="formArea formArea--calc js-main-calc">
+                          <label class="formArea__label" for="car-price">Стоимость автомобиля</label>
+                          <div class="formArea__slot">
+                            <div class="calculate calculate--with-btn">
+                              <button class="calculate__btn" type="button" aria-label="уменьшить" data-target="min"></button>
+                              <input class="calculate__input" data-value="2000000" data-min="500000" data-max="5000000" data-error-message="Некорректное значение" data-prefix="рублей" data-step="50000" id="car-price" type="text" inputmode="numeric" value="2 000 000 рублей">
+                              <button class="calculate__btn calculate__btn--plus" type="button" data-target="plus" aria-label="увеличить"></button>
+                            </div>
+                          </div>
+                          <div class="formArea__caption">
+                            <p>От 500 000 до 5 000 000 рублей</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="element__listItem">
+                        <div class="formArea js-payment-calc">
+                          <label class="formArea__label" for="car-contribution">Первоначальный взнос</label>
+                          <div class="formArea__slot">
+                            <div class="calculate calculate--contribution">
+                              <input class="calculate__input" data-percent="20" data-prefix="рублей" data-error="500000" data-step="50000" data-range-step="5" id="car-contribution" type="text" inputmode="numeric" value="200 000 рублей">
+                            </div>
+                          </div>
+                          <div class="formArea__caption">
+                            <div class="range">
+                              <div class="range__bar">
+                                <div class="range__scale"></div>
+                                <button class="range__btn" type="button" aria-label="ползунок"></button>
+                              </div>
+                              <div class="range__caption">
+                                <p class="range__captionLeft">20%</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="element__listItem">
+                        <div class="formArea formArea--pixel-perfect js-term-calc">
+                          <label class="formArea__label" for="calc-term">Срок кредитования</label>
+                          <div class="formArea__slot">
+                            <div class="calculate calculate--term">
+                              <input class="calculate__input" data-min="1" data-max="5" data-prefix="год,года,лет" data-range-step="1" id="calc-term" type="text" inputmode="numeric" value="1 год">
+                            </div>
+                          </div>
+                          <div class="formArea__slot">
+                          </div>
+                          <div class="formArea__caption">
+                            <div class="range">
+                              <div class="range__bar">
+                                <div class="range__scale"></div>
+                                <button class="range__btn" type="button" aria-label="ползунок"></button>
+                              </div>
+                              <div class="range__caption">
+                                <p class="range__captionLeft">1 год</p>
+                                <p class="range__captionRight">5 лет</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="credit__option">
+                <label class="option js-option-casco">
+                  <input class="option__input" type="checkbox" checked>
+                  <span class="option__element"></span>
+                  <span class="option__label">Оформить КАСКО в нашем банке</span>
+                </label>
+                <label class="option js-option-health">
+                  <input class="option__input" type="checkbox" checked>
+                  <span class="option__element"></span>
+                  <span class="option__label">Оформить Страхование жизни в нашем банке</span>
+                </label>
+              </div>
+            </div>
+            <div class="credit__slide credit__slide--consumer">
+              <div class="credit__element">
+                <div class="element">
+                  <p class="element__label">Шаг 2. Введите параметры кредита</p>
+                  <div class="element__slot">
+                    <ul class="element__list">
+                      <li class="element__listItem">
+                        <div class="formArea formArea--calc js-main-calc">
+                          <label class="formArea__label" for="consumer-price">Сумма потребительского кредита</label>
+                          <div class="formArea__slot">
+                            <div class="calculate calculate--with-btn">
+                              <button class="calculate__btn" type="button" data-target="min" aria-label="уменьшить"></button>
+                              <input class="calculate__input" data-min="50000" data-value="2000000" data-max="3000000" data-error-message="Некорректное значение" data-prefix="рублей" data-step="50000" id="consumer-price" type="text" inputmode="numeric" value="2 000 000 рублей">
+                              <button class="calculate__btn calculate__btn--plus" type="button" data-target="plus" aria-label="увеличить"></button>
+                            </div>
+                          </div>
+                          <div class="formArea__caption">
+                            <p>От 50000 до 3 000 000 рублей</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="element__listItem">
+                        <div class="formArea formArea--pixel-perfect js-term-calc">
+                          <label class="formArea__label" for="consumer-term">Срок кредитования</label>
+                          <div class="formArea__slot">
+                            <div class="calculate calculate--term">
+                              <input class="calculate__input" data-min="1" data-max="7" data-prefix="год,года,лет" data-range-step="1" id="consumer-term" type="text" inputmode="numeric" value="1 год">
+                            </div>
+                          </div>
+                          <div class="formArea__slot">
+                          </div>
+                          <div class="formArea__caption">
+                            <div class="range">
+                              <div class="range__bar">
+                                <div class="range__scale"></div>
+                                <button class="range__btn" type="button" aria-label="ползунок"></button>
+                              </div>
+                              <div class="range__caption">
+                                <p class="range__captionLeft">1 год</p>
+                                <p class="range__captionRight">7 лет</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="credit__option">
+                <label class="option js-option">
+                  <input class="option__input" type="checkbox" checked>
+                  <span class="option__element"></span>
+                  <span class="option__label">Участник зарплатного проекта нашего банка</span>
+                </label>
+              </div>
             </div>
           </div>
-          <div class="credit__box credit__box--right grayBox">
-            <div class="credit__boxContent">
+          <div class="credit__box credit__box--offer grayBox js-result">
+            <div class="credit__boxContent js-result-main">
               <p class="grayBox__title">Наше предложение</p>
               <div class="grayBox__grid">
                 <div class="grayBox__row">
-                  <div class="grayBox__cell">
+                  <div class="grayBox__cell js-result-summer">
                     <p class="grayBox__value">1 330 000 рублей</p>
-                    <p class="grayBox__caption js-name-result">Сумма ипотеки</p>
+                    <p class="grayBox__caption">Сумма ипотеки</p>
                   </div>
-                  <div class="grayBox__cell grayBox__cell--small">
+                  <div class="grayBox__cell js-result-rate">
                     <p class="grayBox__value">9,40%</p>
                     <p class="grayBox__caption">Процентная ставка</p>
                   </div>
                 </div>
                 <div class="grayBox__row">
-                  <div class="grayBox__cell">
+                  <div class="grayBox__cell js-result-payment">
                     <p class="grayBox__value">27 868 рублей</p>
                     <p class="grayBox__caption">Ежемесячный платеж</p>
                   </div>
-                  <div class="grayBox__cell grayBox__cell--small">
+                  <div class="grayBox__cell js-result-income">
                     <p class="grayBox__value">61 929 рублей</p>
                     <p class="grayBox__caption">Необходимый доход</p>
                   </div>
                 </div>
               </div>
-              <div class="grayBox__btn btn btn--w100">Оформить заявку</div>
+              <div class="grayBox__btn btn btn--w90 js-result-btn">Оформить заявку</div>
             </div>
-            <div class="credit__boxInfo">
-              <p class="grayBox__title">Наш банк не выдаёт <span class="js-name-info">ипотечные кредиты</span> меньше 200 000 рублей.</p>
-              <p>Попробуйте использовать другие параметры для расчёта.</p>
+            <div class="credit__boxInfo js-result-info">
+              <p class="grayBox__title">Наш банк не выдаёт <span class="js-result-info-name">ипотечные кредиты</span>
+                меньше <span class="js-result-treshold">200 000</span> рублей.</p>
+              <p class="grayBox__text">Попробуйте использовать другие параметры для расчёта.</p>
             </div>
           </div>
+
+
         </div>
-        <div class="credit__box credit__box--center grayBox grayBox--xs">
+        <div class="credit__box credit__box--form grayBox grayBox--xs js-result-form">
           <p class="grayBox__title">Шаг 3. Оформление заявки</p>
-          <form class="grayBox__form form" action="#" name="#" method="post">
+          <form class="grayBox__form form js-result-form" action="#" name="#" method="post">
             <ul class="form__list">
               <li class="form__listItem">
-                <label class="formArea formArea--horizontal">
+                <label class="formArea formArea--horizontal js-result-form-number">
                   <span class="formArea__label">Номер заявки</span>
                   <span class="formArea__slot">
                     <input class="formArea__input" type="text" value="№ 0010" disabled>
@@ -552,23 +673,23 @@
                 </label>
               </li>
               <li class="form__listItem">
-                <label class="formArea formArea--horizontal">
+                <label class="formArea formArea--horizontal js-result-form-target">
                   <span class="formArea__label">Цель кредита</span>
                   <span class="formArea__slot">
-                    <input class="formArea__input js-name-form" type="text" value="Ипотека" disabled>
+                    <input class="formArea__input" type="text" value="Ипотека" disabled>
                   </span>
                 </label>
               </li>
               <li class="form__listItem">
-                <label class="formArea formArea--horizontal">
-                  <span class="formArea__label js-target-form">Стоимость недвижимости</span>
+                <label class="formArea formArea--horizontal js-result-form-summer">
+                  <span class="formArea__label">Стоимость недвижимости</span>
                   <span class="formArea__slot">
                     <input class="formArea__input" type="text" value="2 000 000 рублей" disabled>
                   </span>
                 </label>
               </li>
               <li class="form__listItem">
-                <label class="formArea formArea--horizontal">
+                <label class="formArea formArea--horizontal js-result-form-payment">
                   <span class="formArea__label">Первоначальный взнос</span>
                   <span class="formArea__slot">
                     <input class="formArea__input" type="text" value="200 000 рублей" disabled>
@@ -576,7 +697,7 @@
                 </label>
               </li>
               <li class="form__listItem">
-                <label class="formArea formArea--horizontal">
+                <label class="formArea formArea--horizontal js-result-form-term">
                   <span class="formArea__label">Срок кредитования</span>
                   <span class="formArea__slot">
                     <input class="formArea__input" type="text" value="5 лет" disabled>
@@ -584,10 +705,10 @@
                 </label>
               </li>
             </ul>
-            <div class="form__grid">
+            <div class="form__grid js-result-form-validation">
               <div class="form__row">
                 <div class="form__cell">
-                  <label class="formArea formArea--withoutLabel">
+                  <label class="formArea formArea--withoutLabel js-result-form-client">
                     <span class="formArea__label">ФИО</span>
                     <span class="formArea__slot">
                       <input class="formArea__input" type="text" placeholder="ФИО" required>
@@ -597,15 +718,15 @@
               </div>
               <div class="form__row">
                 <div class="form__cell form__cell--w50">
-                  <label class="formArea formArea--withoutLabel">
+                  <label class="formArea formArea--withoutLabel js-result-form-phone">
                     <span class="formArea__label">Телефон</span>
                     <span class="formArea__slot">
-                      <input class="formArea__input js-phone" type="text" placeholder="Телефон" required>
+                      <input class="formArea__input" type="text" placeholder="Телефон" required>
                     </span>
                   </label>
                 </div>
                 <div class="form__cell form__cell--w50">
-                  <label class="formArea formArea--withoutLabel">
+                  <label class="formArea formArea--withoutLabel js-result-form-email">
                     <span class="formArea__label">E-mail</span>
                     <span class="formArea__slot">
                       <input class="formArea__input" type="email" placeholder="E-mail" required>
@@ -614,14 +735,14 @@
                 </div>
               </div>
             </div>
-            <button class="form__btn btn btn--form">Отправить</button>
+            <button class="form__btn btn btn--form js-result-form-submit">Отправить</button>
           </form>
         </div>
       </div>
     </section>
     <section class="page__block page__block--contacts contacts js-contacts" id="contacts">
       <h2 class="page__blockTitle">Отделения Лига Банка</h2>
-      <div class="page__blocMain contacts__main">
+      <div class="contacts__main">
         <div class="contacts__top">
           <ul class="contacts__optionGroup optionGroup">
             <li class="optionGroup__item">
@@ -654,19 +775,19 @@
 </main>
 <footer class="page__footer pageFooter">
   <div class="page__layout pageFooter__layout">
-      <div class="pageFooter__box pageFooter__copyright copyright copyright--textInvisible">
-        <a class="copyright__logo logo">
-          <picture>
-            <!-- 1х: 149px; 2x: 149px -->
-            <source media="(min-width: 1200px)" srcset="img/logo/logo.svg 1x">
-            <!-- 1х: 133px; 2x: 133px -->
-            <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg 1x">
-            <!-- 1х: 113px; 2x: 113px -->
-            <img src="img/logo/logo-mob.svg" alt="Лига Банк">
-          </picture>
-        </a>
-        <p>150015, г. Москва, ул. Московская, д. 32<br>Генеральная лицензия Банка России №1050 &#64; Лига Банк, 2019</p>
-      </div>
+    <div class="pageFooter__box pageFooter__copyright copyright copyright--textInvisible">
+      <a class="copyright__logo logo">
+        <picture>
+          <!-- 1х: 149px; 2x: 149px -->
+          <source media="(min-width: 1200px)" srcset="img/logo/logo.svg 1x">
+          <!-- 1х: 133px; 2x: 133px -->
+          <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg 1x">
+          <!-- 1х: 113px; 2x: 113px -->
+          <img src="img/logo/logo-mob.svg" alt="Лига Банк">
+        </picture>
+      </a>
+      <p>150015, г. Москва, ул. Московская, д. 32<br>Генеральная лицензия Банка России №1050 &#64; Лига Банк, 2019</p>
+    </div>
     <div class="pageFooter__box pageFooter__box--order-2">
       <ul class="pageFooter__box pageFooter__linkGroup">
         <li class="pageFooter__linkGroupItem">
@@ -789,6 +910,11 @@
     <button class="form__btn btn btn--popup js-login-submit">Войти</button>
   </form>
   <a class="popup__link" href="#nowhere">Забыли пароль?</a>
+</div>
+<div class="popup popup--result js-result-popup">
+  <button class="popup__close js-result-popup-close" type="button" aria-label="Закрыть попап"></button>
+  <p class="popup__title">Спасибо за обращение в наш банк.</p>
+  <p class="popup__text">Наш менедежер скоро свяжется с вами по указанному номеру телефона.</p>
 </div>
 <div class="overlay js-overlay"></div>
 <script src="js/vendor.js"></script>

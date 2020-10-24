@@ -215,4 +215,8 @@
 
 .formArea--error .formArea__input {
   border-color: red;
+
+  &::placeholder {
+    color: red;
+  }
 }
