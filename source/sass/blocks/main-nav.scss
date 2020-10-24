@@ -67,11 +67,11 @@
   color: $color-text;
   transition: color $transition-2, opacity $transition-2;
   padding: 5px;
+  font-weight: 500;
 
   &:hover,
   &:focus {
     color: $color-brand;
-    text-decoration: underline;
     outline: none;
 
     @include media(xl) {

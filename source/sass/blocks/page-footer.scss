@@ -155,16 +155,15 @@
   line-height: 140%;
   color: $color-text;
   transition: color $transition-2, opacity $transition-2;
+  text-decoration: none;
 
   &:hover,
   &:focus {
     color: $color-brand;
     outline: none;
-    text-decoration: underline;
 
     @include media(xl) {
       color: $color-text;
-      text-decoration: none;
     }
   }
 

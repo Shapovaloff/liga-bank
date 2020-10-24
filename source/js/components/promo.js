@@ -23,13 +23,10 @@ var promo = function () {
 
   var promoSwiper = new Swiper(swiperContainer, {
     loop: true,
-    centeredSlides: true,
-    mousewheel: true,
-    simulateTouch: false,
+    // centeredSlides: true,
     autoplay: {
-      delay: 4000,
+      delay: 6000,
       speed: 100,
-      disableOnInteraction: false,
     },
     pagination: {
       el: swiperPagination,

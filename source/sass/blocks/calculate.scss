@@ -8,10 +8,6 @@
   border-radius: $border-radius;
 }
 
-.calculate--error {
-  border: 1px solid red;
-}
-
 .calculate--error .calculate__input {
   color: red;
 }
@@ -84,6 +80,7 @@
     &::before {
       left: auto;
       right: 23.5px;
+      background-color: $color-text;
     }
 
     &::after {
@@ -106,6 +103,8 @@
   }
 
   &:hover::before,
+  &:focus::before,
+  &:hover::after,
   &:focus::after {
     background-color: $color-brand;
 
