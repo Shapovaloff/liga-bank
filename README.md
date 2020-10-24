@@ -1,5 +1,5 @@
 # Liga Bank
-## Макет можно посмотреть [здесь](https://shapovaloff.github.io/liga-bank/build/).
+## Макет можно посмотреть [здесь](https://shapovaloff.github.io/liga-bank/build/index.html).
 ### Для начала работы у вас должент быть установлен:
 * Node.js v.10.15.3
 * Gulp v4
