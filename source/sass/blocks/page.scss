@@ -39,6 +39,14 @@
 .page__block {
   width: 100%;
   padding-bottom: 110px;
+
+  @include media(xl) {
+    padding-bottom: 80px;
+  }
+
+  @include media(m) {
+    padding-bottom: 60px;
+  }
 }
 
 .page__blockTitle {
@@ -49,4 +57,14 @@
   line-height: 140%;
   color: $color-text;
   margin-bottom: 70px;
+
+  @include media(xl) {
+    font-size: 32px;
+    margin-bottom: 45px;
+  }
+
+  @include media(m) {
+    font-size: 22px;
+    margin-bottom: 35px;
+  }
 }

@@ -29,6 +29,11 @@
   width: 100%;
   margin-top: -30px;
   margin-bottom: 40px;
+
+  @include media(m) {
+    margin-top: -20px;
+    margin-bottom: 30px;
+  }
 }
 
 .form__row {
@@ -36,6 +41,14 @@
   padding-top: 30px;
   margin-left: -15px;
   margin-right: -15px;
+
+  @include media(m) {
+    width: 100%;
+    flex-wrap: wrap;
+    padding-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .form__cell {
@@ -45,5 +58,15 @@
 
   &--w50 {
     width: 50%;
+
+    @include media(m) {
+      width: 100%;
+    }
+  }
+
+  @include media(m) {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 20px;
   }
 }

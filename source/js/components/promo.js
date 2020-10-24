@@ -1,23 +1,40 @@
 import Swiper from 'swiper';
 
 var promo = function () {
-  var promoSlider = document.querySelector('.js-promo');
+  var Selector = {
+    PROMO_SLIDER: '.js-promo',
+    SWIPER_CONTAINER: '.promo__swiper-container',
+    SWIPER_PAGINATION: '.promo__swiper-pagination',
+  };
+
+  var Class = {
+    BULLET: 'bullet',
+    BULLET_ACTIVE: 'bullet--active',
+  };
+
+  var promoSlider = document.querySelector(Selector.PROMO_SLIDER);
+
   if (!promoSlider) {
     return false;
   }
-  var promoSwiper = new Swiper('.promo__swiper-container', {
+
+  var swiperContainer = document.querySelectorAll(Selector.SWIPER_CONTAINER);
+  var swiperPagination = document.querySelectorAll(Selector.SWIPER_PAGINATION);
+
+  var promoSwiper = new Swiper(swiperContainer, {
     loop: true,
     centeredSlides: true,
     mousewheel: true,
+    simulateTouch: false,
     autoplay: {
       delay: 2500,
       disableOnInteraction: false,
     },
     pagination: {
-      el: '.promo__swiper-pagination',
+      el: swiperPagination,
       clickable: true,
-      bulletClass: 'promo__bullet',
-      bulletActiveClass: 'promo__bullet--active',
+      bulletClass: Class.BULLET,
+      bulletActiveClass: Class.BULLET_ACTIVE,
     },
     a11y: {
       paginationBulletMessage: 'Перейти к слайду {{index}}',

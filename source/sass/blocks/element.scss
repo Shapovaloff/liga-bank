@@ -12,6 +12,10 @@
   line-height: 140%;
   color: $color-text;
   margin-bottom: 30px;
+
+  @include media(xl) {
+    font-size: 18px;
+  }
 }
 
 .element__slot {

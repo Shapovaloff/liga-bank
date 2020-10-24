@@ -9,6 +9,12 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    @include media(m) {
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
   }
 }
 
@@ -28,6 +34,7 @@
 .formArea__slot {
   width: 100%;
   position: relative;
+  z-index: 1;
 }
 
 .formArea__slot + .formArea__caption {
@@ -121,4 +128,35 @@
   font-size: 22px;
   line-height: 140%;
   color: $color-text;
+
+  @include media(m) {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.formArea__error {
+  display: none;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 1px;
+  min-height: 58px;
+  border: 1px solid transparent;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  padding-top: 16.8px;
+  padding-bottom: 17.8px;
+  padding-left: 24px;
+  padding-right: 24px;
+  color: darkred;
+}
+
+.formArea--error .formArea__error {
+  display: block;
+}
+
+.formArea--error .formArea__input {
+  border-color: red;
 }
