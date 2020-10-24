@@ -11,15 +11,20 @@
   font-size: 22px;
   line-height: 140%;
   color: $color-text;
-  margin-bottom: 30px;
+  margin-bottom: 17px;
 
   @include media(xl) {
     font-size: 18px;
   }
 }
 
+.element--top .element__label {
+  margin-bottom: 22px;
+}
+
 .element__slot {
   width: 100%;
+  position: relative;
 }
 
 .element__list {
@@ -33,5 +38,5 @@
 }
 
 .element__listItem + .element__listItem {
-  margin-top: 30px;
+  margin-top: 19px;
 }

@@ -59,6 +59,7 @@
 .phoneLink__info {
   @include style-reset;
 
+  max-width: 100%;
   margin-left: 33px;
   font-size: 12px;
   line-height: 140%;

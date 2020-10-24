@@ -1,0 +1,12 @@
+.optionGroup {
+  @include list-reset;
+
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.optionGroup__item + .optionGroup__item {
+  margin-left: 30px;
+}

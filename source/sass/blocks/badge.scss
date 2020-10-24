@@ -1,8 +1,10 @@
 .badge {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 93px;
+  padding-top: 29px;
+  padding-bottom: 24px;
 }
 
 .badge__icon {

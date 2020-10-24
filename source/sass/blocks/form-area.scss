@@ -24,7 +24,7 @@
   font-size: 16px;
   line-height: 140%;
   color: $color-text-label;
-  margin-bottom: 10px;
+  margin-bottom: 9px;
 }
 
 .formArea--withoutLabel .formArea__label {
@@ -38,7 +38,7 @@
 }
 
 .formArea__slot + .formArea__caption {
-  margin-top: 10px;
+  margin-top: 7px;
 }
 
 .formArea__input {
@@ -100,12 +100,19 @@
   }
 }
 
-.formArea__caption a,
+.formArea__caption a {
+  @include style-reset;
+
+  font-size: 12px;
+  line-height: 140%;
+  color: $color-text-gray;
+}
+
 .formArea__caption p,
 .formArea__caption span {
   @include style-reset;
 
-  font-size: 12px;
+  font-size: 14px;
   line-height: 140%;
   color: $color-text-gray;
 }

@@ -48,6 +48,15 @@
   }
 
   &--w100 {
+    font-size: 16px;
+    line-height: 140%;
     width: 100%;
+  }
+
+  &--services {
+    font-size: 16px;
+    line-height: 19px;
+    padding-left: 31px;
+    padding-right: 31px;
   }
 }

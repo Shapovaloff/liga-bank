@@ -6,18 +6,22 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-
-  @include media(xl) {
-    flex-direction: column;
-    flex-wrap: nowrap;
-  }
 }
 
 .credit__box {
-  flex-grow: 1;
-  max-width: 600px;
+  width: 600px;
   margin-right: 30px;
+
+  &--right {
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  &--center {
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   @include media(xl) {
     width: 100%;
@@ -26,19 +30,27 @@
   }
 }
 
-.credit__rightBox {
-  margin-left: auto;
+//.credit__rightBox {
+//  margin-top: 5px;
+//
+//  @include media(xl) {
+//    margin-top: 45px;
+//    margin-left: 0;
+//  }
+//}
+//
+//.credit__centerBox {
+//  margin-top: 70px;
+//
+//  @include media(xl) {
+//    margin-top: 60px;
+//  }
+//}
 
-  @include media(xl) {
-    margin-top: 45px;
-    margin-left: 0;
-  }
+.credit__element + .credit__element {
+  margin-top: 33px;
 }
 
-.credit__centerBox {
-  margin-top: 70px;
-
-  @include media(xl) {
-    margin-top: 60px;
-  }
+.credit__option {
+  margin-top: 21px;
 }

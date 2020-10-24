@@ -1,3 +1,17 @@
 .contacts {
   display: block;
 }
+
+.contacts__top {
+  background-color: $color-main-background;
+  padding-top: 36px;
+  padding-bottom: 30px;
+}
+
+.contacts__map {
+  width: 100%;
+  height: 462px;
+  background-image: url("../img/map/map.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

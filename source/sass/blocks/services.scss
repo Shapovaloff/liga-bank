@@ -24,7 +24,9 @@
 .services__thumbs-swiper-slide {
   box-sizing: border-box;
   width: 25%;
+  display: flex;
   cursor: pointer;
+  height: unset;
 }
 
 .services__thumbs-swiper-slide.swiper-slide-thumb-active {
@@ -39,11 +41,11 @@
 .services__main-swiper-slide {
   box-sizing: border-box;
   width: 100%;
+  display: flex;
   height: unset;
   background-color: $color-main-background;
-  display: flex;
   justify-content: space-between;
-  padding: 60px 135px 60px 70px;
+  padding: 54px 135px 43px 70px;
 
   @include media(xl) {
     padding-left: 45px;
@@ -57,7 +59,7 @@
 }
 
 .services__main {
-  width: 371px;
+  width: 395px;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -74,7 +76,7 @@
   font-weight: 500;
   font-size: 22px;
   line-height: 140%;
-  margin-bottom: 40px;
+  margin-bottom: 29px;
 
   @include media(xl) {
     font-size: 18px;
@@ -104,7 +106,8 @@
 
 .services__main ul {
   list-style-image: url("../img/svg/list-mark.svg");
-  margin: 0 0 40px 0;
+  margin: 0 0 33px 0;
+  padding-left: 20px;
 
   @include media(xl) {
     margin-bottom: 35px;
@@ -118,7 +121,7 @@
 }
 
 .services__main li + li {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .services__img {

@@ -51,15 +51,17 @@ var popupLogin = function () {
 
   var delClassError = function (element) {
     var formArea = element.closest(Selector.FORM_AREA);
-    formArea.classList.toggle(Class.AREA_ERROR, false);
+    formArea.classList.remove(Class.AREA_ERROR);
   };
 
   var addEventListener = function (element) {
     element.addEventListener('focus', onFocusInput);
+    element.addEventListener('keydown', onFocusInput);
   };
 
   var removeEventListener = function (element) {
     element.removeEventListener('focus', onFocusInput);
+    element.removeEventListener('keydown', onFocusInput);
     delClassError(element);
   };
 
@@ -111,6 +113,7 @@ var popupLogin = function () {
     getFocusInput();
     inputs.forEach(function (currentValue) {
       addEventListener(currentValue);
+      delClassError(currentValue);
     });
   };
 
