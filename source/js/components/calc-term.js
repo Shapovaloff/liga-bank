@@ -66,12 +66,7 @@ class CalcTerm {
     this.onMouseMove = function (evt) {
       evt.preventDefault();
       this.rangeParameters.mouseShift = evt.clientX - this.rangeParameters.mouseStartPos;
-      this.rangeParameters.rangePercent = (this.rangeParameters.rangeStartShift + this.rangeParameters.mouseShift) * 100 / this.rangeParameters.widthRangeBar;
-      this.rangeParameters.styleValue = Math.max(Math.min(this.roundToRange(this.rangeParameters.rangePercent), 100), 0);
-      this.getShiftRange(Math.min(this.rangeParameters.styleValue, this.rangeParameters.maxRangeStyle));
-      this.value = Math.round(((this.max - this.min) / this.rangeStep - (100 - this.rangeParameters.styleValue) / this.coefficient) * this.rangeStep) + this.min;
-      this.resetParameter();
-      this.element.dispatchEvent(this.event);
+      this.onRangerMove();
     }.bind(this);
 
     this.onTouchEnd = function (evt) {
@@ -92,13 +87,17 @@ class CalcTerm {
 
     this.onTouchMove = function (evt) {
       this.rangeParameters.mouseShift = evt.targetTouches[0].clientX - this.rangeParameters.mouseStartPos;
-      this.rangeParameters.rangePercent = (this.rangeParameters.rangeStartShift + this.rangeParameters.mouseShift) * 100 / this.rangeParameters.widthRangeBar;
-      this.rangeParameters.styleValue = Math.max(Math.min(this.roundToRange(this.rangeParameters.rangePercent), 100), 0);
-      this.getShiftRange(Math.min(this.rangeParameters.styleValue, this.rangeParameters.maxRangeStyle));
-      this.value = Math.round(((this.max - this.min) / this.rangeStep - (100 - this.rangeParameters.styleValue) / this.coefficient) * this.rangeStep) + this.min;
-      this.resetParameter();
-      this.element.dispatchEvent(this.event);
+      this.onRangerMove();
     }.bind(this);
+  }
+
+  onRangerMove() {
+    this.rangeParameters.rangePercent = (this.rangeParameters.rangeStartShift + this.rangeParameters.mouseShift) * 100 / this.rangeParameters.widthRangeBar;
+    this.rangeParameters.styleValue = Math.max(Math.min(this.roundToRange(this.rangeParameters.rangePercent), 100), 0);
+    this.getShiftRange(Math.min(this.rangeParameters.styleValue, this.rangeParameters.maxRangeStyle));
+    this.value = Math.round(((this.max - this.min) / this.rangeStep - (100 - this.rangeParameters.styleValue) / this.coefficient) * this.rangeStep) + this.min;
+    this.resetParameter();
+    this.element.dispatchEvent(this.event);
   }
 
   getInputValueString(value) {

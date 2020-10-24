@@ -97,8 +97,8 @@ class ResultCredit {
       this.getValueForm();
       window.credit.classList.add(window.Class.FORM_SHOW);
       this.blocks.form.client.focus();
-      if (localStorage.getItem('name')) {
-        this.blocks.form.client.value = localStorage.getItem('name');
+      if (localStorage.getItem('name2')) {
+        this.blocks.form.client.value = localStorage.getItem('name2');
       }
       if (localStorage.getItem('phone')) {
         this.blocks.form.phone.value = localStorage.getItem('phone');
@@ -186,12 +186,23 @@ class ResultCredit {
       this.blocks.form.container.classList.add(Class.ERROR_FORM);
       return false;
     } else {
+      if (!this.getValidateEmail(this.blocks.form.email.value)) {
+        this.blocks.form.areaEmail.classList.add(window.Class.AREA_ERROR);
+        this.blocks.form.container.classList.add(Class.ERROR_FORM);
+        return false;
+      }
       return true;
     }
   }
 
+  getValidateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  }
+
+
   setLocalstorage() {
-    localStorage.setItem('name', this.blocks.form.client.value);
+    localStorage.setItem('nameAndFamily', this.blocks.form.client.value);
     localStorage.setItem('phone', this.blocks.form.phone.value);
     localStorage.setItem('email', this.blocks.form.email.value);
   }
@@ -303,7 +314,7 @@ class ResultCredit {
   init() {
     this.isStorageSupport = true;
     try {
-      localStorage.setItem('name', '');
+      localStorage.setItem('nameAndFamily', '');
       localStorage.setItem('phone', '');
       localStorage.setItem('email', '');
     } catch (err) {
