@@ -48,14 +48,20 @@ var services = function () {
       resistance: true,
       resistanceRatio: 0,
       freeModeMomentumBounce: false,
+      clickable: true,
     });
   };
 
   var getSliderSwiperMainDesktop = function () {
     sliderSwiperMainDesktop = new Swiper(swiperMain, {
       simulateTouch: false,
+      clickable: true,
       thumbs: {
-        swiper: sliderSwiperThumbs
+        swiper: sliderSwiperThumbs,
+      },
+      keyboard: {
+        enabled: true,
+        onlyInViewport: false,
       },
       effect: 'fade',
     });

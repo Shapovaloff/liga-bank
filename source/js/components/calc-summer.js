@@ -1,8 +1,8 @@
 import {getStringOfNumb} from './utils';
 
 var Selector = {
-  BTN_MIN: '.calculate__btn[data-target="min"]',
-  BTN_PLUS: '.calculate__btn[data-target="plus"]',
+  BTN_MIN: '.js-btn-min',
+  BTN_PLUS: '.js-btn-plus',
   INPUT: '.calculate__input',
   ERROR: '.formArea__error'
 };

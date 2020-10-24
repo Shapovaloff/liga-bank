@@ -182,13 +182,18 @@ class ResultCredit {
       }
       if (!this.blocks.form.email.value) {
         this.blocks.form.areaEmail.classList.add(window.Class.AREA_ERROR);
+      } else {
+        if (!this.getValidateEmail(this.blocks.form.email.value)) {
+          this.blocks.form.email.reportValidity();
+          this.blocks.form.areaEmail.classList.add(window.Class.AREA_ERROR);
+        }
       }
       this.blocks.form.container.classList.add(Class.ERROR_FORM);
       return false;
     } else {
       if (!this.getValidateEmail(this.blocks.form.email.value)) {
+        this.blocks.form.email.reportValidity();
         this.blocks.form.areaEmail.classList.add(window.Class.AREA_ERROR);
-        this.blocks.form.container.classList.add(Class.ERROR_FORM);
         return false;
       }
       return true;
@@ -199,7 +204,6 @@ class ResultCredit {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
   }
-
 
   setLocalstorage() {
     localStorage.setItem('nameAndFamily', this.blocks.form.client.value);

@@ -27,8 +27,10 @@ var include = require('posthtml-include');
 var webpack = require('webpack-stream');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+var CompressionPlugin = require('compression-webpack-plugin');
 
-var isDev = true;
+var isDev = false;
 
 gulp.task('css', function () {
   return gulp.src('source/sass/style.scss')
@@ -43,6 +45,7 @@ gulp.task('css', function () {
     .pipe(gulp.dest('build/css'))
     .pipe(server.stream());
 });
+
 
 gulp.task('js', function () {
   return gulp.src('source/js/app.js')
@@ -120,7 +123,7 @@ gulp.task('sprite', function () {
   return gulp.src('source/img/svg/icon-*.svg')
     .pipe(svgstore({inlineSvg: true}))
     .pipe(rename('sprite.svg'))
-    .pipe(gulp.dest('build/img'));
+    .pipe(gulp.dest('build/img/svg'));
 });
 
 gulp.task('html', function () {

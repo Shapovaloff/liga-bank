@@ -16,7 +16,6 @@ var mobMenu = function () {
   if (!headerToggle) {
     return;
   }
-  //проверка наличия комментария
   var header = document.querySelector(Selector.HEADER);
 
   var getToggleVisibleMenu = function () {

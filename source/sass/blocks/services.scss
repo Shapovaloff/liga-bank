@@ -28,6 +28,10 @@
   display: flex;
   cursor: pointer;
   height: unset;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
 }
 
 .services__thumbs-swiper-slide.swiper-slide-thumb-active {
