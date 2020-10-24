@@ -8,7 +8,7 @@ var Selector = {
 };
 
 var Class = {
-  ERROR: 'formArea__error',
+  ERROR: 'calculate--error',
 };
 
 class CalcSummer {
@@ -54,6 +54,7 @@ class CalcSummer {
       this.input.type = 'text';
       if (this.input.value < this.min || this.input.value > this.max) {
         this.input.value = this.error;
+        this.element.classList.add(Class.ERROR);
         this.input.setAttribute('value', this.error);
       }
 

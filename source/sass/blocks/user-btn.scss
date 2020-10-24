@@ -46,10 +46,8 @@
 }
 
 .userBtn__btnIcon svg {
-  @include media(m) {
-    width: 14px;
-    height: 16px;
-  }
+  width: 20px;
+  height: 22px;
 }
 
 .userBtn__btnText {

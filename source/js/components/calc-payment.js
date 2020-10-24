@@ -82,6 +82,34 @@ class CalcPayment {
       this.resetParameter();
       this.element.dispatchEvent(this.event);
     }.bind(this);
+
+
+    this.onTouchEnd = function (evt) {
+      evt.preventDefault();
+      this.range.removeEventListener('touchmove', this.onMouseMove);
+      this.range.removeEventListener('touchend', this.onMouseUp);
+    }.bind(this);
+
+    this.onTouchStart = function (evt) {
+      evt.preventDefault();
+      this.getRangeParameters();
+      this.rangeParameters.rangeClickCoordinate = evt.targetTouches[0].clientX;
+      this.rangeParameters.mouseStartPos = evt.targetTouches[0].clientX;
+      this.range.addEventListener('touchmove', this.onTouchMove);
+      this.range.addEventListener('touchend', this.onTouchEnd);
+    }.bind(this);
+
+
+    this.onTouchMove = function (evt) {
+      evt.preventDefault();
+      this.rangeParameters.mouseShift = evt.targetTouches[0].clientX - this.rangeParameters.mouseStartPos;
+      this.rangeParameters.rangePercent = (this.rangeParameters.rangeStartShift + this.rangeParameters.mouseShift) * 100 / this.rangeParameters.widthRangeBar;
+      this.rangeParameters.styleValue = Math.max(Math.min(this.roundToRange(this.rangeParameters.rangePercent), 100), 0);
+      this.getShiftRange(Math.min(this.rangeParameters.styleValue, this.rangeParameters.maxRangeStyle));
+      this.currentPercent = Math.round(((100 - this.percent) / this.rangeStep - (100 - this.rangeParameters.styleValue) / this.coefficient) * this.rangeStep) + this.percent;
+      this.resetParameter();
+      this.element.dispatchEvent(this.event);
+    }.bind(this);
   }
 
   getInputValueString() {
@@ -131,11 +159,13 @@ class CalcPayment {
     this.getRangeParameters();
     this.input.addEventListener('focus', this.onFocus);
     this.range.addEventListener('mousedown', this.onMouseDownRange);
+    this.range.addEventListener('touchstart', this.onTouchStart);
   }
 
   destroy() {
     this.input.removeEventListener('focus', this.onFocus);
     this.range.removeEventListener('mousedown', this.onMouseDownRange);
+    this.range.removeEventListener('touchstart', this.onTouchStart);
   }
 
   resetParameter() {

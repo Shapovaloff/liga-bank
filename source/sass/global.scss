@@ -55,8 +55,13 @@ textarea {
   outline: none;
 }
 
+input[type="text"]:focus {
+  outline: none;
+}
+
 input[type="text"]:disabled {
   opacity: 1;
+  color: $color-text;
 }
 
 

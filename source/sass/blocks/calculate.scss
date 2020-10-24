@@ -8,6 +8,14 @@
   border-radius: $border-radius;
 }
 
+.calculate--error {
+  border: 1px solid red;
+}
+
+.calculate--error .calculate__input {
+  color: red;
+}
+
 .calculate--with-btn .calculate__input {
   width: calc(100% - 120px);
 
