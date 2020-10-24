@@ -1,0 +1,55 @@
+.social {
+  @include list-reset;
+
+  width: 115px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-right: -5px;
+
+  @include media(xl) {
+    width: 132px;
+    margin-right: 0;
+    margin-left: -10px;
+  }
+
+  @include media(m) {
+    margin-top: 4px;
+  }
+}
+
+.social__item {
+  @include style-reset;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social__item + .social__item {
+  margin-left: 5px;
+
+  @include media(xl) {
+    margin-left: 10px;
+  }
+}
+
+.social__item a {
+  @include style-reset;
+
+  color: $color-text;
+  font-size: 0;
+  line-height: 0;
+  padding: 5px;
+  transition: color $transition-2, opacity $transition-2;
+
+  &:hover,
+  &:focus {
+    color: $color-brand;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+}

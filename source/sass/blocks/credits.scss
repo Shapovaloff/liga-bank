@@ -1,0 +1,14 @@
+.credits {
+  background-color: coral;
+  position: relative;
+
+  &::before {
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    content: "Кредитный калькулятор";
+    font-weight: 700;
+  }
+}

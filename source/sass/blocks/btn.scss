@@ -1,0 +1,50 @@
+.btn {
+  @include style-reset;
+
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  min-height: 53px;
+  border: none;
+  border-radius: 4px;
+  font: inherit;
+  font-weight: 500;
+  font-size: $font-size;
+  line-height: 21px;
+  color: $color-main-background;
+  text-align: center;
+  background-color: $color-brand;
+  padding: 16px 48px 14px;
+  cursor: pointer;
+  transition: opacity $transition-2;
+
+  &:active {
+    opacity: 0.4;
+  }
+
+  @include media(xl) {
+    font-size: 16px;
+    line-height: 19px;
+    min-height: 48px;
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+
+  @include media(m) {
+    font-size: 14px;
+    line-height: 16px;
+    min-height: 43px;
+  }
+
+  &--white {
+    color: $color-text;
+    background-color: $color-main-background;
+    padding-left: 36px;
+    padding-right: 36px;
+
+    @include media(xl) {
+      padding-left: 31px;
+      padding-right: 31px;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 $breakpoints-map: (
-  xxl: 1200,
-  xl: 1080,
+  xxl: 1440,
+  xl: 1200,
   l: 960,
   m: 768,
   s: 640,
@@ -10,7 +10,7 @@ $breakpoints-map: (
 
 @function get-breakpoints-value($value) {
   @if (map-has-key($breakpoints-map, $value)) {
-    @return map-get($breakpoints-map, $value);
+    @return map-get($breakpoints-map, $value) - 1;
   }
 
   @else {

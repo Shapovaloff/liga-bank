@@ -1,11 +1,27 @@
 .page {
-  height: 100%;
-}
+  @include style-reset;
 
-.page__body {
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+
+.page__layout {
+  width: 100%;
+  max-width: 1440px;
+  padding-left: $padding-desktop;
+  padding-right: $padding-desktop;
+  margin: 0 auto;
+
+  @include media(xl) {
+    padding-left: $padding-tablet;
+    padding-right: $padding-tablet;
+  }
+
+  @include media(m) {
+    padding-left: $padding-mobile;
+    padding-right: $padding-mobile;
+  }
 }
 
 .page__header {
@@ -22,5 +38,6 @@
 
 .page__block {
   width: 100%;
+  min-height: 400px;
   padding-bottom: 110px;
 }

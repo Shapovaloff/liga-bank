@@ -1,0 +1,31 @@
+.copyright {
+  width: 257px;
+  display: flex;
+  flex-direction: column;
+}
+
+.copyright__logo {
+  @include style-reset;
+
+  margin-bottom: 10px;
+}
+
+.copyright p {
+  @include style-reset;
+
+  font-size: 12px;
+  line-height: 140%;
+  color: $color-text-gray;
+}
+
+.copyright--textInvisible p {
+  @include media(xl) {
+    display: none;
+  }
+}
+
+.copyright--logoInvisible .copyright__logo {
+  @include media(xl) {
+    display: none;
+  }
+}

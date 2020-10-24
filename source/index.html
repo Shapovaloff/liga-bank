@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" class="page">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,66 +13,69 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
 </head>
-<body class="page__body">
+<body class="page">
 <div style="display: none">
   <include src="build/img/sprite.svg"></include>
 </div>
 <header class="page__header pageHeader">
-  <button class="pageHeader__toggle" type="button">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-  <a class="pageHeader__logo logo">
-    <picture class="promo__picture">
-      <!-- 1х: 149px; 2x: 149px -->
-      <source media="(min-width: 1200px)" srcset="img/logo/logo.svg 1x">
-      <!-- 1х: 133px; 2x: 133px -->
-      <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg 1x">
-      <!-- 1х: 113px; 2x: 113px -->
-      <img src="img/logo/logo-mob.svg" alt="Лига Банк">
-    </picture>
-  </a>
-  <div class="pageHeader__container">
-    <nav class="pageHeader__mainNav mainNav">
-      <ul class="mainNav__list">
-        <li class="mainNav__item">
-          <a href="#services">Услуги</a>
-        </li>
-        <li class="mainNav__item">
-          <a href="#credit">Рассчитать кредит</a>
-        </li>
-        <li class="mainNav__item">
-          <a href="#contacts">Контакты</a>
-        </li>
-        <li class="mainNav__item">
-          <a href="#nowhere">Задать вопрос</a>
+  <div class="page__layout pageHeader__layout">
+    <button class="pageHeader__toggle" type="button">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <a class="logo pageHeader__logo">
+      <picture>
+        <!-- 1х: 149px; 2x: 149px -->
+        <source media="(min-width: 1200px)" srcset="img/logo/logo.svg 1x">
+        <!-- 1х: 133px; 2x: 133px -->
+        <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg 1x">
+        <!-- 1х: 113px; 2x: 113px -->
+        <img src="img/logo/logo-mob.svg" alt="Лига Банк">
+      </picture>
+    </a>
+    <div class="pageHeader__container">
+      <nav class="pageHeader__mainNav mainNav">
+        <ul class="mainNav__list">
+          <li class="mainNav__item">
+            <a href="#services">Услуги</a>
+          </li>
+          <li class="mainNav__item">
+            <a href="#credit">Рассчитать кредит</a>
+          </li>
+          <li class="mainNav__item">
+            <a href="#contacts">Контакты</a>
+          </li>
+          <li class="mainNav__item">
+            <a href="#nowhere">Задать вопрос</a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="pageHeader__userNav userNav">
+        <li class="userNav__item">
+          <a href="#nowhere" class="userNav__btn">
+                <span class="userNav__btnIcon">
+                  <svg width="20px" height="22px">
+                    <use xlink:href="#icon-login"></use>
+                  </svg>
+                </span>
+            <span class="userNav__btnText">Войти в Интернет-банк</span>
+          </a>
         </li>
       </ul>
-    </nav>
-    <ul class="userNav">
-      <li class="userNav__item">
-        <a href="#nowhere" class="userNav__btn">
-            <span class="userNav__btnIcon">
-              <svg width="20px" height="20px">
-                <use xlink:href="#icon-login"></use>
-              </svg>
-            </span>
-          <span class="userNav__btnText">Войти в Интернет-банк</span>
-        </a>
-      </li>
-    </ul>
+    </div>
   </div>
+
 </header>
 <main class="page__main">
-  <section class="page__block promo js-promo" id="promo">
+  <section class="promo js-promo" id="promo">
     <div class="swiper-container promo__swiper-container">
       <div class="swiper-wrapper promo__swiper-wrapper">
-        <div class="swiper-slide promo__swiper-slide promo__swiper-slide">
+        <div class="swiper-slide promo__swiper-slide">
           <div class="promo__main promo__main--white">
             <h1>Лига Банк</h1>
             <p>Кредиты на любой случай</p>
-            <a class="promo__btn btn btn--white" href="#credit">Рассичтать кредит</a>
+            <a class="btn btn--white promo__btn" href="#credit">Рассичтать кредит</a>
           </div>
           <div class="promo__img">
             <picture>
@@ -82,17 +85,17 @@
                       srcset="img/slider/slide-1-tablet.webp 1x, img/slider/slide-1-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/slider/slide-1-mob.webp 1x, img/slider/slide-1-mob@2x.webp 2x">
               <!-- 1x: 1366px; 2x: 2732 -->
-              <source media="(min-width: 1200px)" srcset="img/slider/slide-1.jpg 1x, img/slider/slide-1@2x.jpg">
+              <source media="(min-width: 1200px)" srcset="img/slider/slide-1.jpg 1x, img/slider/slide-1@2x.jpg 2x">
               <!-- 1x: 768px; 2x: 1536 -->
               <source media="(min-width: 768px)"
                       srcset="img/slider/slide-1-tablet.jpg 1x, img/slider/slide-1-tablet@2x.jpg 2x">
               <!-- 1x: 320px; 2x: 640 -->
-              <img src="img/slider/slide-1-mob.jpg" srcset="img/slider/slide-1-mob@2x.jpg @2x" alt="Слайд 1">
+              <img src="img/slider/slide-1-mob.jpg" srcset="img/slider/slide-1-mob@2x.jpg 2x" alt="Слайд 1">
             </picture>
           </div>
         </div>
         <div class="swiper-slide promo__swiper-slide">
-          <div class="promo__main promo__main--white">
+          <div class="promo__main">
             <h1>Лига Банк</h1>
             <p>Ваша уверенность в завтрашнем дне</p>
           </div>
@@ -101,23 +104,23 @@
               <source type="image/webp" media="(min-width: 1200px)"
                       srcset="img/slider/slide-2.webp 1x, img/slider/slide-2@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)"
-                      srcset="img/slider/slide-2-tablet.webp 1x, img/slider/slide-2-tablet@2x.webp 2x">
+                      srcset="img/slider/slide-2-tablet.webp 1x, img/slider/slide-1-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/slider/slide-2-mob.webp 1x, img/slider/slide-2-mob@2x.webp 2x">
               <!-- 1x: 1366px; 2x: 2732 -->
-              <source media="(min-width: 1200px)" srcset="img/slider/slide-2.jpg 1x, img/slider/slide-2@2x.jpg">
+              <source media="(min-width: 1200px)" srcset="img/slider/slide-2.jpg 1x, img/slider/slide-2@2x.jpg 2x">
               <!-- 1x: 768px; 2x: 1536 -->
               <source media="(min-width: 768px)"
-                      srcset="img/slider/slide-2-tablet.jpg 1x, img/slider/slide-2-tablet@2x.jpg 2x">
+                      srcset="img/slider/slide-2-tablet.jpg 1x, img/slider/slide-1-tablet@2x.jpg 2x">
               <!-- 1x: 320px; 2x: 640 -->
-              <img src="img/slider/slide-2-mob.jpg" srcset="img/slider/slide-2-mob@2x.jpg @2x" alt="Слайд 1">
+              <img src="img/slider/slide-2-mob.jpg" srcset="img/slider/slide-2-mob@2x.jpg 2x" alt="Слайд 1">
             </picture>
           </div>
         </div>
         <div class="swiper-slide promo__swiper-slide">
-          <div class="promo__main promo__main--white">
+          <div class="promo__main">
             <h1>Лига Банк</h1>
             <p>Всегда рядом</p>
-            <a class="promo__btn btn" href="#contacts">Найти отделение</a>
+            <a class="btn promo__btn" href="#contacts">Найти отделение</a>
           </div>
           <div class="promo__img">
             <picture>
@@ -127,114 +130,132 @@
                       srcset="img/slider/slide-3-tablet.webp 1x, img/slider/slide-3-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/slider/slide-3-mob.webp 1x, img/slider/slide-3-mob@2x.webp 2x">
               <!-- 1x: 1366px; 2x: 2732 -->
-              <source media="(min-width: 1200px)" srcset="img/slider/slide-3.jpg 1x, img/slider/slide-3@2x.jpg">
+              <source media="(min-width: 1200px)" srcset="img/slider/slide-3.jpg 1x, img/slider/slide-3@2x.jpg 2x">
               <!-- 1x: 768px; 2x: 1536 -->
               <source media="(min-width: 768px)"
                       srcset="img/slider/slide-3-tablet.jpg 1x, img/slider/slide-3-tablet@2x.jpg 2x">
               <!-- 1x: 320px; 2x: 640 -->
-              <img src="img/slider/slide-3-mob.jpg" srcset="img/slider/slide-3-mob@2x.jpg @2x" alt="Слайд 1">
+              <img src="img/slider/slide-3-mob.jpg" srcset="img/slider/slide-3-mob@2x.jpg 2x" alt="Слайд 1">
             </picture>
           </div>
         </div>
       </div>
       <div class="swiper-pagination promo__swiper-pagination"></div>
     </div>
+    </div>
   </section>
-  <div class="page__wrapper">
+  <div class="page__layout">
     <section class="page__block services js-services" id="services"></section>
     <section class="page__block credits js-credits" id="credit"></section>
     <section class="page__block contacts js-contacts" id="contacts"></section>
   </div>
 </main>
 <footer class="page__footer pageFooter">
-  <div class="pageFooter__box">
-    <div class="pageFooter__copyright copyright">
-      <a class="pageFooter__logo logo">
-        <picture class="promo__picture">
-          <!-- 1х: 149px; 2x: 149px -->
-          <source media="(min-width: 1200px)" srcset="img/logo/logo.svg 1x">
-          <!-- 1х: 133px; 2x: 133px -->
-          <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg 1x">
-          <!-- 1х: 113px; 2x: 113px -->
-          <img src="img/logo/logo-mob.svg" alt="Лига Банк">
-        </picture>
-      </a>
-      <p>150015, г. Москва, ул. Московская, д. 32<br>Генеральная лицензия Банка России №1050 Лига Банк, 2019</p>
+  <div class="page__layout pageFooter__layout">
+    <div class="pageFooter__box">
+      <div class="pageFooter__copyright copyright copyright--textInvisible">
+        <a class="copyright__logo logo">
+          <picture>
+            <!-- 1х: 149px; 2x: 149px -->
+            <source media="(min-width: 1200px)" srcset="img/logo/logo.svg 1x">
+            <!-- 1х: 133px; 2x: 133px -->
+            <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg 1x">
+            <!-- 1х: 113px; 2x: 113px -->
+            <img src="img/logo/logo-mob.svg" alt="Лига Банк">
+          </picture>
+        </a>
+        <p>150015, г. Москва, ул. Московская, д. 32<br>Генеральная лицензия Банка России №1050 &#64; Лига Банк, 2019</p>
+      </div>
     </div>
-  </div>
-  <div class="pageFooter__box">
-    <ul class="pageFooter__linkGroup">
-      <li class="pageFooter__linkGroupItem">
-        <a href="#services">Услуги</a>
-      </li>
-      <li class="pageFooter__linkGroupItem">
-        <a href="#credit">Рассчитать кредит</a>
-      </li>
-      <li class="pageFooter__linkGroupItem">
-        <a href="#contacts">Контакты</a>
-      </li>
-      <li class="pageFooter__linkGroupItem">
-        <a href="#nowhere">Задать вопрос</a>
-      </li>
-    </ul>
-  </div>
-  <div class="pageFooter__box">
-    <div class="pageFooter__phoneLink phoneLink">
-        <span class="phoneLink__icon">
+    <div class="pageFooter__box pageFooter__box--order-2">
+      <ul class="pageFooter__linkGroup">
+        <li class="pageFooter__linkGroupItem">
+          <a href="#services">Услуги</a>
+        </li>
+        <li class="pageFooter__linkGroupItem">
+          <a href="#credit">Рассчитать кредит</a>
+        </li>
+        <li class="pageFooter__linkGroupItem">
+          <a href="#contacts">Контакты</a>
+        </li>
+        <li class="pageFooter__linkGroupItem">
+          <a href="#nowhere">Задать вопрос</a>
+        </li>
+      </ul>
+    </div>
+    <div class="pageFooter__box pageFooter__box--desktopInvisible  pageFooter__box--order-4">
+      <div class="pageFooter__copyright copyright copyright--logoInvisible">
+        <a class="copyright__logo logo">
+          <picture>
+            <!-- 1х: 149px; 2x: 149px -->
+            <source media="(min-width: 1200px)" srcset="img/logo/logo.svg 1x">
+            <!-- 1х: 133px; 2x: 133px -->
+            <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg 1x">
+            <!-- 1х: 113px; 2x: 113px -->
+            <img src="img/logo/logo-mob.svg" alt="Лига Банк">
+          </picture>
+        </a>
+        <p>150015, г. Москва, ул. Московская, д. 32<br>Генеральная лицензия Банка России №1050 &#64; Лига Банк, 2019</p>
+      </div>
+    </div>
+    <div class="pageFooter__box pageFooter__box--order-1">
+      <div class="phoneLink">
+        <a class="phoneLink__number" href="tel:*0904">
+          <span class="phoneLink__icon">
             <svg width="10px" height="16px">
               <use xlink:href="#icon-phone"></use>
             </svg>
-        </span>
-      <div class="phoneLink__main">
-        <a href="tel:*0904">*0904</a>
-        <p>Бесплатно для абонентов МТС, Билайн, Мегафон, Теле2</p>
+          </span>
+          <span class="phoneLink__main">*0904</span>
+        </a>
+        <p class="phoneLink__info">Бесплатно для абонентов МТС, Билайн, Мегафон, Теле2</p>
       </div>
     </div>
-  </div>
-  <div class="pageFooter__box">
-    <div class="pageFooter__phoneLink phoneLink">
-        <span class="phoneLink__icon">
+    <div class="pageFooter__box pageFooter__box--order-3">
+      <div class="phoneLink phoneLink--small">
+        <a class="phoneLink__number" href="tel:88001112233">
+          <span class="phoneLink__icon">
             <svg width="16px" height="16px">
               <use xlink:href="#icon-tel"></use>
             </svg>
-        </span>
-      <div class="phoneLink__main">
-        <a href="tel:88001112233">8 800 111 22 33</a>
-        <p>Бесплатный для всех городов России</p>
+          </span>
+          <span class="phoneLink__main">8 800 111 22 33</span>
+        </a>
+        <p class="phoneLink__info">Бесплатный для всех городов России</p>
       </div>
     </div>
-  </div>
-  <div class="pageFooter__box">
-    <ul class="pageFooter__social social">
-      <li class="social__item">
-        <a href="#nowhere" aria-label="Наш фейсбук">
-          <svg width="9px" height="16px">
-            <use xlink:href="#icon-fb"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="social__item">
-        <a href="#nowhere" aria-label="Наш инстаграмм">
-          <svg width="16px" height="16px">
-            <use xlink:href="#icon-inst"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="social__item">
-        <a href="#nowhere" aria-label="Наш твиттер">
-          <svg width="16px" height="13px">
-            <use xlink:href="#icon-tw"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="social__item">
-        <a href="#nowhere" aria-label="Наш ютюб">
-          <svg width="16px" height="13px">
-            <use xlink:href="#icon-youtube"></use>
-          </svg>
-        </a>
-      </li>
-    </ul>
+    <div class="pageFooter__box pageFooter__box--order-5">
+      <ul class="social">
+        <li class="social__item">
+          <a href="#nowhere" aria-label="Наш фейсбук">
+            <svg width="9px" height="16px">
+              <use xlink:href="#icon-fb"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#nowhere" aria-label="Наш инстаграмм">
+            <svg width="16px" height="16px">
+              <use xlink:href="#icon-inst"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#nowhere" aria-label="Наш твиттер">
+            <svg width="16px" height="13px">
+              <use xlink:href="#icon-tw"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#nowhere" aria-label="Наш ютюб">
+            <svg width="16px" height="13px">
+              <use xlink:href="#icon-youtube"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </footer>
 <script src="js/app.js"></script>

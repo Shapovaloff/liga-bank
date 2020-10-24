@@ -1,8 +1,21 @@
 $min-width: 320px;
-$main-background: #ffffff;
-$additional-background: #ffffff;
-$color-text: #1f1e25;
+$max-width: 1440px;
+$padding-desktop: 98px;
+$padding-tablet: 45px;
+$padding-mobile: 15px;
+
 $font-family: "roboto", "Arial", sans-serif;
 $font-size: 18px;
 $font-weight: 400;
 $line-height: 130%;
+
+$transition-2: 0.2s ease;
+
+$main-background: #ffffff;
+$additional-background: #ffffff;
+
+$color-text: #1f1e25;
+$color-brand: #2c36f2;
+$color-brand-dark: #2028b6;
+$color-main-background: #f6f7ff;
+$color-text-gray: #707c87;

@@ -1,0 +1,61 @@
+.mainNav {
+  width: 479px;
+  display: flex;
+  align-items: flex-end;
+  margin-top: -5px;
+
+  @include media(xl) {
+    width: 415px;
+  }
+}
+
+.mainNav__list {
+  @include list-reset;
+
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mainNav__item {
+  @include style-reset;
+
+  max-width: 200px;
+  display: flex;
+  align-items: center;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+
+  @include media(xl) {
+    padding-left: 5.5px;
+    padding-right: 5.5px;
+  }
+}
+
+.mainNav a {
+  display: block;
+  font: inherit;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: $color-text;
+  transition: color $transition-2, opacity $transition-2;
+  padding: 5px;
+
+  &:hover,
+  &:focus {
+    color: $color-brand;
+    text-decoration: underline;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+
+  @include media(xl) {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}

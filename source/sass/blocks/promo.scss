@@ -1,0 +1,178 @@
+.promo {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.promo__swiper-slide {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 114px;
+  min-height: 400px;
+
+  @include media(xl) {
+    min-height: 300px;
+    padding-top: 64px;
+    padding-bottom: 76px;
+  }
+
+  @include media(m) {
+    min-height: 226px;
+    padding-top: 40px;
+    padding-right: 100px;
+    padding-bottom: 26px;
+    padding-left: 15px;
+  }
+}
+
+.promo__main {
+  width: 400px;
+
+  margin-left: 268px;
+
+  @include media(xl) {
+    margin-left: 86px;
+    min-height: 161px;
+  }
+
+  @include media(m) {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.promo__main h1 {
+  @include style-reset;
+
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 63px;
+  color: $color-text;
+  margin-bottom: 10px;
+
+  @include media(xl) {
+    font-size: 46px;
+    line-height: 54px;
+    margin-bottom: 7px;
+  }
+
+  @include media(m) {
+    font-size: 38px;
+    line-height: 45px;
+  }
+}
+
+.promo__main p {
+  @include style-reset;
+
+  font-size: 22px;
+  line-height: 26px;
+
+  @include media(xl) {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  @include media(m) {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+.promo__main--white h1,
+.promo__main--white p {
+  color: $color-main-background;
+}
+
+.promo__main p + p {
+  margin-top: 10px;
+}
+
+.promo__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.promo__img img {
+  width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.promo__btn {
+  margin-top: 34px;
+
+  @include media(xl) {
+    margin-top: 30px;
+  }
+
+  @include media(m) {
+    margin-top: 22px;
+  }
+}
+
+.promo__swiper-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: 15px;
+}
+
+.promo__swiper-pagination.swiper-pagination-bullets {
+  bottom: 40px;
+
+  @include media(xl) {
+    bottom: 15px;
+  }
+
+  @include media(m) {
+    bottom: 10px;
+  }
+}
+
+.promo__bullet {
+  position: relative;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: $color-brand-dark;
+  margin-left: 4px;
+  margin-right: 4px;
+
+  &::after {
+    position: absolute;
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @include media(m) {
+    width: 6px;
+    height: 6px;
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+
+  &--active {
+    background-color: $color-main-background;
+  }
+}
