@@ -38,6 +38,15 @@
 
 .page__block {
   width: 100%;
-  min-height: 400px;
   padding-bottom: 110px;
+}
+
+.page__blockTitle {
+  @include style-reset;
+
+  font-weight: bold;
+  font-size: 41px;
+  line-height: 140%;
+  color: $color-text;
+  margin-bottom: 70px;
 }

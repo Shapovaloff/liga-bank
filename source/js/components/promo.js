@@ -5,7 +5,7 @@ var promo = function () {
   if (!promoSlider) {
     return false;
   }
-  var promoSwiper = new Swiper('.swiper-container', {
+  var promoSwiper = new Swiper('.promo__swiper-container', {
     loop: true,
     centeredSlides: true,
     mousewheel: true,
@@ -14,7 +14,7 @@ var promo = function () {
       disableOnInteraction: false,
     },
     pagination: {
-      el: '.swiper-pagination',
+      el: '.promo__swiper-pagination',
       clickable: true,
       bulletClass: 'promo__bullet',
       bulletActiveClass: 'promo__bullet--active',

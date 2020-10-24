@@ -1,15 +1,64 @@
 .services {
-  background-color: cadetblue;
-  position: relative;
-  height: 562px;
+  padding-top: 60px;
+}
 
-  &::before {
-    display: block;
-    width: 100%;
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    content: "Услуги";
-    font-weight: 700;
-  }
+.services__thumbs-swiper-container {
+  width: 100%;
+}
+
+.services__thumbs-swiper-slide {
+  box-sizing: border-box;
+  width: 25%;
+  cursor: pointer;
+}
+
+.services__thumbs-swiper-slide.swiper-slide-thumb-active {
+  background-color: $color-main-background;
+}
+
+.services__main-swiper-wrapper {
+  box-sizing: border-box;
+  align-items: stretch;
+}
+
+.services__main-swiper-slide {
+  box-sizing: border-box;
+  width: 100%;
+  height: unset;
+  background-color: $color-main-background;
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 135px 60px 70px;
+}
+
+.services__main {
+  width: 371px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.services__main h2 {
+  @include style-reset;
+
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 140%;
+  margin-bottom: 40px;
+}
+
+.services__main p {
+  @include style-reset;
+
+  font-size: 18px;
+  line-height: 130%;
+}
+
+.services__main ul {
+  list-style-image: url("../img/svg/list-mark.svg");
+  margin: 0 0 40px 0;
+}
+
+.services__main li + li {
+  margin-top: 20px;
 }

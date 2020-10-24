@@ -1,0 +1,60 @@
+.grayBox {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-main-background;
+  padding: 60px 60px 60px 58px;
+  align-self: flex-start;
+
+  &--xs {
+    width: 770px;
+    padding: 70px;
+  }
+}
+
+.grayBox__title {
+  @include style-reset;
+
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 140%;
+  margin-bottom: 40px;
+}
+
+.grayBox--xs .grayBox__title {
+  text-align: center;
+}
+
+.grayBox__grid {
+  width: 100%;
+  margin-top: -40px;
+  margin-bottom: 40px;
+}
+
+.grayBox__row {
+  display: flex;
+  padding-top: 40px;
+  margin-left: -25px;
+  margin-right: -25px;
+}
+
+.grayBox__cell {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.grayBox__value {
+  @include style-reset;
+
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 140%;
+}
+
+.grayBox__caption {
+  @include style-reset;
+
+  font-size: 16px;
+  line-height: 140%;
+  color: $color-text-label;
+}

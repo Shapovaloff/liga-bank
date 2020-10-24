@@ -1,0 +1,117 @@
+.calculate {
+  width: 100%;
+  position: relative;
+}
+
+.calculate__area {
+  width: 100%;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $color-text;
+  border-radius: $border-radius;
+}
+
+.calculate__input {
+  width: 140px;
+  border: none;
+  font: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  color: $color-text;
+  text-align: right;
+  padding-top: 15px;
+  padding-bottom: 16px;
+  padding-right: 5px;
+}
+
+.calculate__prefix {
+  @include style-reset;
+
+  width: 140px;
+  font: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  color: $color-text;
+  text-align: left;
+  padding-top: 15px;
+  padding-bottom: 16px;
+}
+
+.calculate__btn {
+  @include list-reset;
+
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 24px;
+  border: none;
+  background-color: transparent;
+  width: 22px;
+  height: 22px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: opacity $transition-2;
+
+  &::before {
+    position: absolute;
+    display: block;
+    width: 16px;
+    height: 2px;
+    content: "";
+    background-color: $color-text;
+    top: 11px;
+    left: 3px;
+    margin-top: -1px;
+    transition: background-color $transition-2;
+  }
+
+  &--plus {
+    left: auto;
+    right: 24px;
+
+    &::after {
+      position: absolute;
+      display: block;
+      width: 2px;
+      height: 16px;
+      content: "";
+      background-color: $color-text;
+      left: 11px;
+      top: 3px;
+      margin-left: -1px;
+      transition: background-color $transition-2;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+
+    &::before,
+    &::after {
+      background-color: $color-brand;
+    }
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+
+  &:disabled {
+    cursor: auto;
+
+    &:hover,
+    &:focus {
+      &::before,
+      &::after {
+        background-color: $color-text;
+      }
+    }
+  }
+}

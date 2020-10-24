@@ -1,0 +1,33 @@
+.element {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.element__label {
+  @include style-reset;
+
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 140%;
+  color: $color-text;
+  margin-bottom: 30px;
+}
+
+.element__slot {
+  width: 100%;
+}
+
+.element__list {
+  @include list-reset;
+}
+
+.element__listItem {
+  @include style-reset;
+
+  width: 100%;
+}
+
+.element__listItem + .element__listItem {
+  margin-top: 30px;
+}

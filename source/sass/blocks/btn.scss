@@ -1,13 +1,12 @@
 .btn {
   @include style-reset;
 
-  width: auto;
   display: inline-block;
   vertical-align: middle;
   min-height: 53px;
   border: none;
   border-radius: 4px;
-  font: inherit;
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 500;
   font-size: $font-size;
   line-height: 21px;
@@ -46,5 +45,9 @@
       padding-left: 31px;
       padding-right: 31px;
     }
+  }
+
+  &--w100 {
+    width: 100%;
   }
 }

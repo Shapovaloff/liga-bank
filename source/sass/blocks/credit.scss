@@ -1,0 +1,22 @@
+.credit {
+  width: 100%;
+}
+
+.credit__main {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.credit__box {
+  width: 600px;
+}
+
+.credit__rightBox {
+  margin-left: auto;
+}
+
+.credit__centerBox {
+  margin-top: 70px;
+}

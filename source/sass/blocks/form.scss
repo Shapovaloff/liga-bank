@@ -1,0 +1,49 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__area + .form__area {
+  margin-top: 30px;
+}
+
+.form--login-popup .form__btn {
+  margin-top: 30px;
+}
+
+.form__list {
+  @include list-reset;
+
+  margin-bottom: 30px;
+}
+
+.form__listItem {
+  @include style-reset;
+
+  border-bottom: 1px solid $color-form-line;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.form__grid {
+  width: 100%;
+  margin-top: -30px;
+  margin-bottom: 40px;
+}
+
+.form__row {
+  display: flex;
+  padding-top: 30px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.form__cell {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  &--w50 {
+    width: 50%;
+  }
+}

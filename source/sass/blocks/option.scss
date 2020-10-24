@@ -1,0 +1,38 @@
+.option {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.option__input {
+  @include visuallyHidden;
+}
+
+.option__input[type="checkbox"] + .option__element {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: $color-brand;
+  font-size: 0;
+  line-height: 0;
+  border-radius: 2px;
+}
+
+.option__input[type="checkbox"]:checked + .option__element {
+  background-image: url("../img/svg/mark-white.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.option__label {
+  @include list-reset;
+
+  font-size: 16px;
+  line-height: 140%;
+  color: $color-text;
+}
+
+.option__element + .option__label {
+  margin-left: 8px;
+}

@@ -130,7 +130,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var dom7
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_promo_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/promo.js */ \"./source/js/components/promo.js\");\n// import $ from 'jquery';\n// import select2 from 'select2';\n\n\n\nObject(_components_promo_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\n\n//# sourceURL=webpack:///./source/js/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_promo_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/promo.js */ \"./source/js/components/promo.js\");\n/* harmony import */ var _components_services_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/services.js */ \"./source/js/components/services.js\");\n// import $ from 'jquery';\n// import select2 from 'select2';\n\n\n\n\nObject(_components_promo_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\nObject(_components_services_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n\n\n//# sourceURL=webpack:///./source/js/app.js?");
 
 /***/ }),
 
@@ -142,7 +142,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _com
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ \"./node_modules/swiper/js/swiper.esm.bundle.js\");\n\n\nvar promo = function () {\n  var promoSlider = document.querySelector('.js-promo');\n  if (!promoSlider) {\n    return false;\n  }\n  var promoSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('.swiper-container', {\n    loop: true,\n    centeredSlides: true,\n    mousewheel: true,\n    autoplay: {\n      delay: 2500,\n      disableOnInteraction: false,\n    },\n    pagination: {\n      el: '.swiper-pagination',\n      clickable: true,\n      bulletClass: 'promo__bullet',\n      bulletActiveClass: 'promo__bullet--active',\n    },\n    a11y: {\n      paginationBulletMessage: 'Перейти к слайду {{index}}',\n    },\n  });\n\n  return promoSwiper;\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (promo);\n\n\n//# sourceURL=webpack:///./source/js/components/promo.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ \"./node_modules/swiper/js/swiper.esm.bundle.js\");\n\n\nvar promo = function () {\n  var promoSlider = document.querySelector('.js-promo');\n  if (!promoSlider) {\n    return false;\n  }\n  var promoSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('.promo__swiper-container', {\n    loop: true,\n    centeredSlides: true,\n    mousewheel: true,\n    autoplay: {\n      delay: 2500,\n      disableOnInteraction: false,\n    },\n    pagination: {\n      el: '.promo__swiper-pagination',\n      clickable: true,\n      bulletClass: 'promo__bullet',\n      bulletActiveClass: 'promo__bullet--active',\n    },\n    a11y: {\n      paginationBulletMessage: 'Перейти к слайду {{index}}',\n    },\n  });\n\n  return promoSwiper;\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (promo);\n\n\n//# sourceURL=webpack:///./source/js/components/promo.js?");
+
+/***/ }),
+
+/***/ "./source/js/components/services.js":
+/*!******************************************!*\
+  !*** ./source/js/components/services.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ \"./node_modules/swiper/js/swiper.esm.bundle.js\");\n\n\nvar services = function () {\n  var swiperThumbs = new swiper__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('.services__swiper-thumbs', {\n    slidesPerView: 'auto',\n    resistance: true,\n    resistanceRatio: 0,\n    freeModeMomentumBounce: false,\n  });\n\n  var galleryTop = new swiper__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('.services__main-swiper-container', {\n    effect: 'fade',\n    thumbs: {\n      swiper: swiperThumbs\n    }\n  });\n\n  return [swiperThumbs, galleryTop];\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (services);\n\n\n//# sourceURL=webpack:///./source/js/components/services.js?");
 
 /***/ })
 

@@ -1,0 +1,73 @@
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 544px;
+  min-height: 493px;
+  background-color: $color-main-background;
+  border: 4px solid $color-brand;
+  padding: 58px 60px 62px;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.popup__close {
+  @include style-reset;
+
+  display: block;
+  width: 16px;
+  height: 16px;
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 58px;
+  right: 60px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: opacity $transition-2;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: "";
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: $color-text;
+    transition: background-color $transition-2;
+    border-radius: 2px;
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover::before,
+  &:hover::after,
+  &:focus::before,
+  &:focus::after {
+    background-color: $color-brand;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+}
+
+.popup__logo {
+  width: 150px;
+  height: 27px;
+  margin-bottom: 45px;
+}
