@@ -81,11 +81,11 @@ var services = function () {
 
   getInitSlider();
 
-  function handleOrientationChange() {
+  function onWindowResize() {
     getInitSlider();
   }
 
-  mediaQueryList.addListener(handleOrientationChange);
+  mediaQueryList.addListener(onWindowResize);
 };
 
 export default services;

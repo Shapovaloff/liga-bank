@@ -15,6 +15,7 @@ var popupLogin = function () {
     POPUP_SHOW: 'popup--show',
     OVERLAY_SHOW: 'overlay--show',
     AREA_ERROR: 'formArea--error',
+    NO_SCROLL: 'page--no-scroll',
   };
 
   var Keydown = {
@@ -84,6 +85,7 @@ var popupLogin = function () {
   var getClosePopup = function () {
     popup.classList.remove(Class.POPUP_SHOW);
     overlay.classList.remove(Class.OVERLAY_SHOW);
+    window.body.classList.remove(Class.NO_SCROLL);
     statusPassword = true;
     switchShowPassword();
     btnShowPassword.removeEventListener('click', onClickBtnShowPassword);
@@ -104,6 +106,7 @@ var popupLogin = function () {
     env.preventDefault();
     popup.classList.add(Class.POPUP_SHOW);
     overlay.classList.add(Class.OVERLAY_SHOW);
+    window.body.classList.add(Class.NO_SCROLL);
     btnOpenPopup.removeEventListener('click', onClickBtnShowPopup);
     btnClosePopup.addEventListener('click', onClosePopup);
     btnShowPassword.addEventListener('click', onClickBtnShowPassword);

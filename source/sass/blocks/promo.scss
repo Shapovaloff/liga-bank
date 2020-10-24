@@ -2,6 +2,9 @@
   width: 100%;
   max-width: $max-width;
   margin: 0 auto;
+}
+
+.promo__swiper-wrapper {
   background-color: $color-brand;
 }
 
@@ -12,6 +15,7 @@
   padding-top: 100px;
   padding-bottom: 114px;
   min-height: 400px;
+  height: unset;
 
   @include media(xl) {
     min-height: 300px;
@@ -39,7 +43,7 @@
   }
 
   @include media(m) {
-    width: 100%;
+    width: 205px;
     margin-left: 0;
   }
 }

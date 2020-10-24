@@ -1,39 +1,45 @@
 .pageHeader {
   width: 100%;
   background-color: $color-main-background;
-  padding-top: 34px;
-  padding-bottom: 30px;
-
-  @include media(xl) {
-    padding-top: 27px;
-    padding-bottom: 20px;
-  }
-
-  @include media(m) {
-    padding-top: 15px;
-    padding-bottom: 16px;
-  }
 }
 
 .pageHeader__layout {
+  width: 100%;
+  max-width: $max-width;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 34px;
+  padding-bottom: 30px;
+  padding-left: $padding-desktop;
+  padding-right: $padding-desktop;
+  margin: 0 auto;
+
+  @include media(xl) {
+    padding: 11px 30px 5px 45px;
+  }
+
+  @include media(m) {
+    padding: 0;
+    background-color: $main-background;
+    position: relative;
+    z-index: 4;
+    justify-content: flex-start;
+  }
 }
 
 .pageHeader__toggle {
   @include style-reset;
 
   display: none;
-  width: 16px;
-  height: 10px;
+  width: 46px;
+  height: 48px;
   background-color: transparent;
   border: none;
   position: relative;
 
   @include media(m) {
     display: block;
-    margin-right: 15px;
   }
 }
 
@@ -42,21 +48,41 @@
   width: 16px;
   height: 2px;
   position: absolute;
-  left: 0;
+  left: 15px;
   background-color: $color-text;
 }
 
 .pageHeader__toggle span:nth-child(1) {
-  top: -1px;
+  top: 18px;
+  transition: top 0.1s ease 0.3s, transform 0.1s ease 0s;
 }
 
 .pageHeader__toggle span:nth-child(2) {
   top: 50%;
   transform: translateY(-50%);
+  transition: opacity 0.2s ease 0.2s;
 }
 
 .pageHeader__toggle span:nth-child(3) {
-  bottom: -1px;
+  bottom: 18px;
+  transition: bottom 0.1s ease 0.3s, transform 0.1s ease 0s;
+}
+
+.pageHeader--open .pageHeader__toggle span:nth-child(1) {
+  top: 23px;
+  transform: rotate(45deg);
+  transition: top 0.1s ease 0s, transform 0.1s ease 0.3s;
+}
+
+.pageHeader--open .pageHeader__toggle span:nth-child(2) {
+  opacity: 0;
+  transition: opacity 0.2s ease 0.2s;
+}
+
+.pageHeader--open .pageHeader__toggle span:nth-child(3) {
+  bottom: 23px;
+  transform: rotate(-45deg);
+  transition: bottom 0.1s ease 0s, transform 0.1s ease 0.3s;
 }
 
 .pageHeader__logo {
@@ -71,37 +97,54 @@
     width: 133px;
     height: 22px;
     margin-right: 55px;
-    transform: translateY(-6px);
+    transform: translateY(-5px);
   }
 
   @include media(m) {
     width: 113px;
     height: 17px;
-    margin-right: 0;
+    margin-right: auto;
     transform: translateY(-4px);
+    z-index: 4;
   }
 }
 
-.pageHeader__container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-grow: 1;
+.pageHeader__dropdown {
+  display: none;
 
   @include media(m) {
-    flex-grow: 0;
-    justify-content: flex-end;
-    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    bottom: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: $main-background;
+    z-index: 3;
+    padding: 50px;
+    transition: transform $transition-3;
   }
+}
+
+.pageHeader--open .pageHeader__dropdown {
+  overflow-y: auto;
+  transform: translateY(100%);
 }
 
 .pageHeader__mainNav {
+  margin-right: auto;
+}
+
+.pageHeader__userBtn {
+  transform: translateY(-2px);
+  margin-left: 15px;
+
   @include media(m) {
-    display: none;
+    transform: none;
   }
 }
 
-.pageHeader__userNav {
-  transform: translateY(-2px);
-  margin-left: 15px;
+.pageHeader__dropdownNav {
+  margin-top: auto;
 }

@@ -1,0 +1,77 @@
+.userBtn {
+  width: 203px;
+  display: flex;
+  align-items: center;
+  color: $color-text;
+  position: relative;
+
+  @include media(xl) {
+    width: auto;
+    padding: 16px 15px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-brand;
+    outline: none;
+
+    @include media(xl) {
+      color: $color-text;
+    }
+  }
+
+  &:active {
+    opacity: 0.4;
+
+    @include media(xl) {
+      opacity: 1;
+    }
+  }
+}
+
+.userBtn__btnIcon + .userBtn__btnText {
+  margin-left: 10px;
+}
+
+.userBtn__btnIcon {
+  color: inherit;
+  transition: color $transition-2, opacity $transition-2;
+  font-size: 0;
+  line-height: 0;
+  transform: translateY(-2px);
+
+  @include media(m) {
+    transform: none;
+  }
+}
+
+.userBtn__btnIcon svg {
+  @include media(m) {
+    width: 14px;
+    height: 16px;
+  }
+}
+
+.userBtn__btnText {
+  flex-shrink: 0;
+  font: inherit;
+  font-size: 16px;
+  line-height: 19px;
+  color: inherit;
+  transition: color $transition-2, opacity $transition-2;
+
+  @include media(xl) {
+    display: none;
+  }
+}
+
+.userBtn__btn:hover .userBtn__btnText,
+.userBtn__btn:focus .userBtn__btnText {
+  color: $color-brand;
+  text-decoration: underline;
+}
+
+.userBtn__btn:hover .userBtn__btnIcon path,
+.userBtn__btn:focus .userBtn__btnIcon path {
+  fill: $color-brand;
+}

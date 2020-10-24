@@ -27,7 +27,8 @@ var promo = function () {
     mousewheel: true,
     simulateTouch: false,
     autoplay: {
-      delay: 2500,
+      delay: 4000,
+      speed: 800,
       disableOnInteraction: false,
     },
     pagination: {

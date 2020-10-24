@@ -64,8 +64,8 @@
   </svg>
 </div>
 <header class="page__header pageHeader">
-  <div class="page__layout pageHeader__layout">
-    <button class="pageHeader__toggle" type="button">
+  <div class="pageHeader__layout">
+    <button class="pageHeader__toggle js-header-toggle" type="button">
       <span></span>
       <span></span>
       <span></span>
@@ -80,38 +80,79 @@
         <img src="img/logo/logo-mob.svg" alt="Лига Банк">
       </picture>
     </a>
-    <div class="pageHeader__container">
-      <nav class="pageHeader__mainNav mainNav">
-        <ul class="mainNav__list">
-          <li class="mainNav__item">
-            <a href="#services">Услуги</a>
-          </li>
-          <li class="mainNav__item">
-            <a href="#credit">Рассчитать кредит</a>
-          </li>
-          <li class="mainNav__item">
-            <a href="#contacts">Контакты</a>
-          </li>
-          <li class="mainNav__item">
-            <a href="#nowhere">Задать вопрос</a>
-          </li>
-        </ul>
-      </nav>
-      <ul class="pageHeader__userNav userNav">
-        <li class="userNav__item">
-          <a href="#nowhere" class="userNav__btn js-login-open">
-                <span class="userNav__btnIcon">
-                  <svg width="20px" height="22px">
-                    <use xlink:href="#icon-login"></use>
-                  </svg>
-                </span>
-            <span class="userNav__btnText">Войти в Интернет-банк</span>
-          </a>
+    <nav class="pageHeader__mainNav mainNav">
+      <ul class="mainNav__list">
+        <li class="mainNav__item">
+          <a href="#services">Услуги</a>
+        </li>
+        <li class="mainNav__item">
+          <a href="#credit">Рассчитать кредит</a>
+        </li>
+        <li class="mainNav__item">
+          <a href="#contacts">Контакты</a>
+        </li>
+        <li class="mainNav__item">
+          <a href="#nowhere">Задать вопрос</a>
         </li>
       </ul>
-    </div>
+    </nav>
+      <a href="#nowhere" class="pageHeader__userBtn userBtn js-login-open">
+        <span class="userBtn__btnIcon">
+          <svg width="20px" height="22px">
+            <use xlink:href="#icon-login"></use>
+          </svg>
+        </span>
+        <span class="userBtn__btnText">Войти в Интернет-банк</span>
+      </a>
   </div>
-
+  <div class="pageHeader__dropdown">
+    <nav class="pageHeader__dropdownNav mainNav mainNav--dropdown">
+      <ul class="mainNav__list">
+        <li class="mainNav__item">
+          <a href="#services">Услуги</a>
+        </li>
+        <li class="mainNav__item">
+          <a href="#credit">Рассчитать кредит</a>
+        </li>
+        <li class="mainNav__item">
+          <a href="#contacts">Контакты</a>
+        </li>
+        <li class="mainNav__item">
+          <a href="#nowhere">Задать вопрос</a>
+        </li>
+      </ul>
+    </nav>
+    <ul class="pageHeader__social social social--header">
+      <li class="social__item">
+        <a href="#nowhere" aria-label="Наш фейсбук">
+          <svg width="9px" height="16px">
+            <use xlink:href="#icon-fb"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="social__item">
+        <a href="#nowhere" aria-label="Наш инстаграмм">
+          <svg width="16px" height="16px">
+            <use xlink:href="#icon-inst"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="social__item">
+        <a href="#nowhere" aria-label="Наш твиттер">
+          <svg width="16px" height="13px">
+            <use xlink:href="#icon-tw"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="social__item">
+        <a href="#nowhere" aria-label="Наш ютюб">
+          <svg width="16px" height="13px">
+            <use xlink:href="#icon-youtube"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
 </header>
 <main class="page__main">
   <section class="promo js-promo" id="promo">
@@ -150,13 +191,13 @@
               <source type="image/webp" media="(min-width: 1200px)"
                       srcset="img/slider/slide-2.webp 1x, img/slider/slide-2@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)"
-                      srcset="img/slider/slide-2-tablet.webp 1x, img/slider/slide-1-tablet@2x.webp 2x">
+                      srcset="img/slider/slide-2-tablet.webp 1x, img/slider/slide-2-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/slider/slide-2-mob.webp 1x, img/slider/slide-2-mob@2x.webp 2x">
               <!-- 1x: 1366px; 2x: 2732 -->
               <source media="(min-width: 1200px)" srcset="img/slider/slide-2.jpg 1x, img/slider/slide-2@2x.jpg 2x">
               <!-- 1x: 768px; 2x: 1536 -->
               <source media="(min-width: 768px)"
-                      srcset="img/slider/slide-2-tablet.jpg 1x, img/slider/slide-1-tablet@2x.jpg 2x">
+                      srcset="img/slider/slide-2-tablet.jpg 1x, img/slider/slide-2-tablet@2x.jpg 2x">
               <!-- 1x: 320px; 2x: 640 -->
               <img src="img/slider/slide-2-mob.jpg" srcset="img/slider/slide-2-mob@2x.jpg 2x" alt="Слайд 1">
             </picture>
@@ -391,10 +432,12 @@
                         <div class="calculate js-calculate">
                           <button class="calculate__btn" type="button" aria-label="уменьшить"></button>
                           <div class="calculate__area">
-                            <input class="calculate__input" id="price" type="text" inputmode="numeric" data-min="1200000" data-max="25000000" data-step="100000" value="2 000 000">
+                            <input class="calculate__input" id="price" type="text" inputmode="numeric"
+                                   data-min="1200000" data-max="25000000" data-step="100000" value="2 000 000">
                             <span class="calculate__prefix">рублей</span>
                           </div>
-                          <button class="calculate__btn calculate__btn--plus" type="button" aria-label="увеличить"></button>
+                          <button class="calculate__btn calculate__btn--plus" type="button"
+                                  aria-label="увеличить"></button>
                         </div>
                       </div>
                       <div class="formArea__caption">
@@ -408,7 +451,8 @@
                       <div class="formArea__slot">
                         <div class="calculate calculate--contribution">
                           <div class="calculate__area">
-                            <input class="calculate__input" id="contribution" type="text" inputmode="numeric" data-min="1200000" data-max="25000000" data-step="5" value="200 000">
+                            <input class="calculate__input" id="contribution" type="text" inputmode="numeric"
+                                   data-min="1200000" data-max="25000000" data-step="5" value="200 000">
                             <span class="calculate__prefix">рублей</span>
                           </div>
                         </div>
@@ -431,7 +475,8 @@
                       <div class="formArea__slot">
                         <div class="calculate calculate--term">
                           <div class="calculate__area">
-                            <input class="calculate__input" id="term" type="text" inputmode="numeric" data-min="5" data-max="30" data-prefix="лет" data-step="5" value="5">
+                            <input class="calculate__input" id="term" type="text" inputmode="numeric" data-min="5"
+                                   data-max="30" data-prefix="лет" data-step="5" value="5">
                             <span class="calculate__prefix">лет</span>
                           </div>
                         </div>
@@ -574,21 +619,21 @@
           <ul class="contacts__optionGroup optionGroup">
             <li class="optionGroup__item">
               <label class="option option--xs">
-                <input class="option__input" type="checkbox" checked>
+                <input class="option__input" value="russia" type="checkbox" checked>
                 <span class="option__element"></span>
                 <span class="option__label">Россия</span>
               </label>
             </li>
             <li class="optionGroup__item">
               <label class="option option--xs">
-                <input class="option__input" type="checkbox" checked>
+                <input class="option__input" value="cis" type="checkbox" checked>
                 <span class="option__element"></span>
                 <span class="option__label">СНГ</span>
               </label>
             </li>
             <li class="optionGroup__item">
               <label class="option option--xs">
-                <input class="option__input" type="checkbox">
+                <input class="option__input" value="europe" type="checkbox">
                 <span class="option__element"></span>
                 <span class="option__label">Европа</span>
               </label>
@@ -602,8 +647,7 @@
 </main>
 <footer class="page__footer pageFooter">
   <div class="page__layout pageFooter__layout">
-    <div class="pageFooter__box">
-      <div class="pageFooter__copyright copyright copyright--textInvisible">
+      <div class="pageFooter__box pageFooter__copyright copyright copyright--textInvisible">
         <a class="copyright__logo logo">
           <picture>
             <!-- 1х: 149px; 2x: 149px -->
@@ -616,9 +660,8 @@
         </a>
         <p>150015, г. Москва, ул. Московская, д. 32<br>Генеральная лицензия Банка России №1050 &#64; Лига Банк, 2019</p>
       </div>
-    </div>
     <div class="pageFooter__box pageFooter__box--order-2">
-      <ul class="pageFooter__linkGroup">
+      <ul class="pageFooter__box pageFooter__linkGroup">
         <li class="pageFooter__linkGroupItem">
           <a href="#services">Услуги</a>
         </li>
@@ -675,7 +718,7 @@
       </div>
     </div>
     <div class="pageFooter__box pageFooter__box--order-5">
-      <ul class="social">
+      <ul class="social social--footer">
         <li class="social__item">
           <a href="#nowhere" aria-label="Наш фейсбук">
             <svg width="9px" height="16px">
@@ -717,14 +760,15 @@
     <label class="form__area formArea formArea--smallLabel js-area-login">
       <span class="formArea__label">Логин</span>
       <span class="formArea__slot">
-        <input class="formArea__input" type="text" required="">
+        <input class="formArea__input" type="text" required>
       <span class="formArea__error">Заполните поле</span>
       </span>
     </label>
     <div class="form__area formArea formArea--smallLabel js-area-password">
       <label class="formArea__label" for="login-password">Пароль</label>
       <div class="formArea__slot">
-        <input class="formArea__input formArea__input--withBtn" id="login-password" type="password" required="">
+        <input class="formArea__input formArea__input--withBtn" id="login-password" type="password" required
+               autocomplete="on">
         <button class="formArea__visibleBtn js-password-show" type="button">
           <svg width="22px" height="12px">
             <use xlink:href="#icon-eye"></use>

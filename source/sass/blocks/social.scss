@@ -5,7 +5,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  margin: -3px -5px 0 0;
+  margin: 0 -5px 0 0;
 
   @include media(xl) {
     width: 132px;
@@ -17,6 +17,23 @@
   @include media(m) {
     margin-top: -5px;
     margin-left: -10px;
+  }
+
+  &--footer {
+    margin-top: -3px;
+
+    @include media(xl) {
+      margin-top: 0;
+    }
+  }
+
+  &--header {
+    display: none;
+
+    @include media(m) {
+      display: flex;
+      margin-top: 40px;
+    }
   }
 }
 

@@ -1,11 +1,26 @@
 .mainNav {
-  width: 479px;
+  width: 640px;
   display: flex;
   align-items: flex-end;
   margin-top: -5px;
 
   @include media(xl) {
-    width: 415px;
+    width: 425px;
+  }
+
+  @include media(m) {
+    display: none;
+  }
+
+  &--dropdown {
+    display: none;
+
+    @include media(m) {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 }
 
@@ -15,6 +30,11 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+
+  @include media(m) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
 }
 
 .mainNav__item {
@@ -30,6 +50,11 @@
     padding-left: 5.5px;
     padding-right: 5.5px;
   }
+}
+
+.mainNav--dropdown .mainNav__item {
+  padding: 0;
+  padding-right: 0;
 }
 
 .mainNav a {
@@ -52,6 +77,7 @@
     @include media(xl) {
       color: $color-text;
       transition: none;
+      text-decoration: none;
     }
   }
 
@@ -67,4 +93,12 @@
     font-size: 14px;
     line-height: 16px;
   }
+}
+
+.mainNav--dropdown a {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
